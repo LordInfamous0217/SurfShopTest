@@ -13,7 +13,11 @@
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            background-color: #f5f2eb;
+            background-image: url('https://images.unsplash.com/photo-1502680390469-be75c86b636f?q=80&w=2070');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
             color: #1e2a2e;
             line-height: 1.5;
         }
@@ -24,22 +28,32 @@
             padding: 2rem 1.5rem;
         }
 
-        /* Logo area */
+        /* Logo area - textured card */
         .logo {
             text-align: center;
             padding: 1.5rem;
-            border: 2px solid #cbd5e1;
-            border-radius: 12px;
+            border: none;
+            border-radius: 20px;
             margin-bottom: 2rem;
-            background-color: #ffffff;
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(2px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
             cursor: pointer;
+            background-image: repeating-linear-gradient(
+                45deg,
+                rgba(0, 0, 0, 0.02) 0px,
+                rgba(0, 0, 0, 0.02) 2px,
+                transparent 2px,
+                transparent 8px
+            );
         }
 
         .logo:hover {
-            background: #fffef7;
+            background: rgba(255, 254, 247, 0.96);
             border-color: #3a8bb9;
-            box-shadow: 0 4px 12px rgba(58, 139, 185, 0.1);
+            box-shadow: 0 8px 24px rgba(58, 139, 185, 0.15);
+            transform: translateY(-2px);
         }
 
         .logo p {
@@ -61,15 +75,27 @@
             margin: 1rem 0;
         }
 
-        /* Sections */
+        /* Sections - textured cards */
         section {
             margin-bottom: 2.5rem;
-            background: white;
-            border-radius: 16px;
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(2px);
+            border-radius: 20px;
             padding: 1.5rem;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-            transition: transform 0.1s ease;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: transform 0.1s ease, box-shadow 0.2s ease;
             cursor: pointer;
+            background-image: repeating-linear-gradient(
+                45deg,
+                rgba(0, 0, 0, 0.02) 0px,
+                rgba(0, 0, 0, 0.02) 2px,
+                transparent 2px,
+                transparent 8px
+            );
+        }
+
+        section:hover {
+            box-shadow: 0 8px 28px rgba(58, 139, 185, 0.12);
         }
 
         section:active {
@@ -113,7 +139,7 @@
         }
 
         .contact-card {
-            background: #f8fafc;
+            background: rgba(248, 250, 252, 0.9);
             padding: 0.75rem 1rem;
             border-radius: 12px;
             flex: 1;
@@ -124,6 +150,7 @@
         .contact-card:hover {
             box-shadow: 0 0 8px #3a8bb960;
             transform: translateY(-2px);
+            background: rgba(248, 250, 252, 1);
         }
 
         .contact-card strong {
@@ -133,14 +160,25 @@
             text-transform: uppercase;
         }
 
+        /* Click-to-call phone link */
+        .call-link {
+            color: #1a5f7a;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .call-link:hover {
+            color: #3a8bb9;
+        }
+
         /* Pulse animation on phone card */
         .contact-card:first-child {
             animation: softPulse 2s ease-in-out infinite;
         }
 
         @keyframes softPulse {
-            0%, 100% { background-color: #f8fafc; }
-            50% { background-color: #e3f0f7; }
+            0%, 100% { background-color: rgba(248, 250, 252, 0.9); }
+            50% { background-color: rgba(227, 240, 247, 0.95); }
         }
 
         /* Hours list */
@@ -150,7 +188,7 @@
 
         .hours-list li, .price-list li {
             padding: 0.5rem 0;
-            border-bottom: 1px solid #cbd5e1;
+            border-bottom: 1px solid rgba(203, 213, 225, 0.6);
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
@@ -168,7 +206,7 @@
         /* Price list with interactive slide */
         .price-list li {
             padding: 0.5rem 0;
-            border-bottom: 1px solid #cbd5e1;
+            border-bottom: 1px solid rgba(203, 213, 225, 0.6);
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
@@ -178,7 +216,7 @@
 
         .price-list li:hover {
             transform: translateX(8px);
-            background: #eef4f8;
+            background: rgba(238, 244, 248, 0.8);
             border-radius: 8px;
         }
 
@@ -198,7 +236,7 @@
 
         /* Service area */
         .service-area {
-            background: #eef2ef;
+            background: rgba(238, 242, 239, 0.8);
             border-radius: 12px;
             padding: 1rem;
             text-align: center;
@@ -209,17 +247,27 @@
 
         .service-area:active {
             transform: scale(0.98);
-            background: #e3f0f7;
+            background: rgba(227, 240, 247, 0.9);
         }
 
         /* Footer */
         footer {
             text-align: center;
             padding: 1.5rem;
-            color: #6c757d;
+            color: rgba(108, 117, 125, 0.9);
             font-size: 0.8rem;
-            border-top: 1px solid #e2e8f0;
+            border-top: 1px solid rgba(226, 232, 240, 0.5);
             margin-top: 1rem;
+        }
+
+        /* Wave divider between sections (subtle) */
+        .wave-divider {
+            text-align: center;
+            color: #3a8bb9;
+            font-size: 0.7rem;
+            letter-spacing: 6px;
+            margin: -1rem 0 1rem 0;
+            opacity: 0.4;
         }
     </style>
 </head>
@@ -237,9 +285,18 @@
     <section>
         <h2>Contact</h2>
         <div class="contact-grid">
-            <div class="contact-card"><strong>📞 Phone</strong> 361-488-3614</div>
-            <div class="contact-card"><strong>✉️ Email</strong> CCSurfRepair@gmail.com</div>
-            <div class="contact-card"><strong>📍 Service Area</strong> Corpus Christi & nearby</div>
+            <div class="contact-card">
+                <strong>📞 Phone</strong><br>
+                <a href="tel:+13614883614" class="call-link">361-488-3614</a>
+            </div>
+            <div class="contact-card">
+                <strong>✉️ Email</strong><br>
+                CCSurfRepair@gmail.com
+            </div>
+            <div class="contact-card">
+                <strong>📍 Service Area</strong><br>
+                Corpus Christi & nearby
+            </div>
         </div>
     </section>
 
@@ -272,6 +329,14 @@
         <div class="service-area">
             📍 Serving Corpus Christi, Padre Island, Port Aransas, and surrounding coastal communities.
         </div>
+    </section>
+
+    <!-- Optional: Small "Why Choose Us" blurb -->
+    <section>
+        <h2>Why Choose Us</h2>
+        <p style="text-align: center; font-style: italic; color: #4a5b66;">
+            🏄 Over 10 years of experience • Fast turnaround • Fair prices
+        </p>
     </section>
 
     <footer>
