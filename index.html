@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Third Earth Surf | Corpus Christi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CC Surf Repair | Corpus Christi</title>
     <style>
         * {
             margin: 0;
@@ -13,24 +13,9 @@
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=2073&auto=format');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
+            background-color: #f5f2eb;
             color: #1e2a2e;
             line-height: 1.5;
-        }
-
-        /* Semi-transparent overlay for readability */
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.4);
-            z-index: -1;
         }
 
         /* Container for content */
@@ -40,59 +25,49 @@
             padding: 2rem 1.5rem;
         }
 
-        /* Logo area with glassmorphism effect */
+        /* Logo area — placeholder border */
         .logo {
             text-align: center;
             padding: 1.5rem;
-            background: rgba(255, 255, 255, 0.9);
-            backdrop-filter: blur(10px);
-            border-radius: 24px;
+            border: 2px solid #cbd5e1;
+            border-radius: 12px;
             margin-bottom: 2rem;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-            border: 1px solid rgba(255,255,255,0.3);
+            background-color: #ffffff;
         }
 
-        .logo img {
-            max-width: 100%;
-            max-height: 150px;
-            width: auto;
-            height: auto;
-            object-fit: contain;
-            margin-bottom: 0.5rem;
+        .logo p {
+            color: #64748b;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
         }
 
         .logo h1 {
-            font-size: 1.75rem;
+            font-size: 2rem;
             color: #0f3b3c;
             margin-top: 0.5rem;
         }
 
-        .logo p {
-            color: #2d4a3e;
-            font-size: 0.9rem;
-            font-weight: 500;
+        /* Navigation / divider */
+        hr {
+            border: none;
+            height: 1px;
+            background: #e2e8f0;
+            margin: 1rem 0;
         }
 
-        /* Section cards - textured boxes */
+        /* Section spacing */
         section {
-            margin-bottom: 2rem;
-            background: rgba(255, 255, 255, 0.92);
-            backdrop-filter: blur(8px);
-            border-radius: 28px;
+            margin-bottom: 2.5rem;
+            background: white;
+            border-radius: 16px;
             padding: 1.5rem;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            border: 1px solid rgba(255,255,255,0.4);
-            transition: transform 0.2s ease;
-        }
-
-        section:hover {
-            transform: translateY(-2px);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
         }
 
         h2 {
             font-size: 1.5rem;
             margin-bottom: 1rem;
-            color: #1a4a2a;
+            color: #2c5f2d;
             border-left: 4px solid #2c5f2d;
             padding-left: 0.75rem;
         }
@@ -106,35 +81,18 @@
         }
 
         .contact-card {
-            background: rgba(255, 255, 255, 0.7);
+            background: #f8fafc;
             padding: 0.75rem 1rem;
-            border-radius: 20px;
+            border-radius: 12px;
             flex: 1;
             min-width: 180px;
-            transition: all 0.2s ease;
-        }
-
-        .contact-card:hover {
-            background: rgba(255, 255, 255, 0.9);
-            transform: scale(1.02);
         }
 
         .contact-card strong {
-            color: #1a4a2a;
+            color: #2c5f2d;
             display: block;
             font-size: 0.85rem;
             text-transform: uppercase;
-        }
-
-        /* Phone number link - tap to call */
-        .phone-link {
-            color: inherit;
-            text-decoration: none;
-            font-weight: 600;
-        }
-
-        .phone-link:hover {
-            text-decoration: underline;
         }
 
         /* Hours & price list */
@@ -143,15 +101,11 @@
         }
 
         .hours-list li, .price-list li {
-            padding: 0.7rem 0;
-            border-bottom: 1px solid rgba(0,0,0,0.08);
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #e9ecef;
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
-        }
-
-        .hours-list li:last-child, .price-list li:last-child {
-            border-bottom: none;
         }
 
         .price-list li span:first-child {
@@ -159,59 +113,61 @@
         }
 
         .price-list li span:last-child {
-            color: #1a4a2a;
-            font-weight: 700;
+            color: #2c5f2d;
+            font-weight: 600;
         }
 
         /* Service area note */
         .service-area {
-            background: rgba(30, 50, 30, 0.1);
-            border-radius: 20px;
+            background: #eef2ef;
+            border-radius: 12px;
             padding: 1rem;
             text-align: center;
             font-style: italic;
-            backdrop-filter: blur(4px);
         }
 
         footer {
             text-align: center;
             padding: 1.5rem;
-            color: #e8e0d5;
+            color: #6c757d;
             font-size: 0.8rem;
+            border-top: 1px solid #e2e8f0;
             margin-top: 1rem;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
         }
 
-        @media (max-width: 600px) {
-            .container {
-                padding: 1rem;
-            }
-            section {
-                padding: 1rem;
-            }
-            h2 {
-                font-size: 1.25rem;
-            }
+        /* Future background image placeholder */
+        /* Later you can uncomment and add your image:
+        body {
+            background-image: url('your-image.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
         }
+        .container {
+            background: rgba(255,255,255,0.92);
+            border-radius: 24px;
+            margin: 1rem auto;
+        }
+        */
     </style>
 </head>
 <body>
 
 <div class="container">
-    <!-- Logo area with YOUR actual image -->
+    <!-- Logo placeholder — swap with your real logo image later -->
     <div class="logo">
-        <img src="jesselogo.jpg" alt="Third Earth Surf Logo">
-        <h1>Third Earth Surf</h1>
+        <p>[ YOUR LOGO HERE ]</p>
+        <h1>CC Surf Repair</h1>
         <p>Corpus Christi & Surrounding Areas</p>
     </div>
 
-    <!-- Contact Info with tap-to-call -->
+    <!-- Contact Info -->
     <section>
         <h2>Contact</h2>
         <div class="contact-grid">
-            <div class="contact-card"><strong>📞 Phone</strong><br><a href="tel:3614883614" class="phone-link">361-488-3614</a></div>
-            <div class="contact-card"><strong>✉️ Email</strong><br><a href="mailto:ThirdEarthSurf@gmail.com" style="color: #1a4a2a;">ThirdEarthSurf@gmail.com</a></div>
-            <div class="contact-card"><strong>📍 Service Area</strong><br>Corpus Christi & nearby</div>
+            <div class="contact-card"><strong>📞 Phone</strong> 361-488-3614</div>
+            <div class="contact-card"><strong>✉️ Email</strong> CCSurfRepair@gmail.com</div>
+            <div class="contact-card"><strong>📍 Service Area</strong> Corpus Christi & nearby</div>
         </div>
     </section>
 
@@ -223,22 +179,22 @@
         </ul>
     </section>
 
-    <!-- Prices - Changed "From" to "Starting At" -->
+    <!-- Prices — using your $100 ding repair as base -->
     <section>
         <h2>Repair Prices</h2>
         <ul class="price-list">
-            <li><span>🔧 Ding Repair</span><span>Starting At $100</span></li>
-            <li><span>🔧 Crack Repair</span><span>Starting At $85</span></li>
-            <li><span>🔧 Fin Box Repair</span><span>Starting At $75</span></li>
-            <li><span>🔧 Delamination</span><span>Starting At $120</span></li>
-            <li><span>🔧 Nose Repair</span><span>Starting At $110</span></li>
-            <li><span>🔧 Tail Repair</span><span>Starting At $110</span></li>
-            <li><span>🔧 Pressure Damage</span><span>Starting At $90</span></li>
+            <li><span>🔧 Ding Repair</span><span>From $100</span></li>
+            <li><span>🔧 Crack Repair</span><span>From $85</span></li>
+            <li><span>🔧 Fin Box Repair</span><span>From $75</span></li>
+            <li><span>🔧 Delamination</span><span>From $120</span></li>
+            <li><span>🔧 Nose Repair</span><span>From $110</span></li>
+            <li><span>🔧 Tail Repair</span><span>From $110</span></li>
+            <li><span>🔧 Pressure Damage</span><span>From $90</span></li>
         </ul>
-        <p style="font-size: 0.85rem; color: #2d4a3e; margin-top: 0.75rem;">*Final price depends on damage assessment</p>
+        <p style="font-size: 0.85rem; color: #4a5b66; margin-top: 0.75rem;">*Final price depends on damage assessment</p>
     </section>
 
-    <!-- Service area -->
+    <!-- Simple location note for Google Business -->
     <section>
         <h2>Service Area</h2>
         <div class="service-area">
@@ -247,7 +203,7 @@
     </section>
 
     <footer>
-        Third Earth Surf — Professional repairs, fast turnaround
+        CC Surf Repair — Professional repairs, fast turnaround
     </footer>
 </div>
 
