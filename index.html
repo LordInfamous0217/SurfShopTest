@@ -43,14 +43,15 @@
             padding: 2rem 1.5rem;
         }
 
-        /* Logo area with hover animation */
+        /* Logo area - more transparent */
         .logo {
             text-align: center;
             padding: 1.5rem;
-            border: 2px solid #cbd5e1;
+            border: 2px solid rgba(255, 255, 255, 0.3);
             border-radius: 12px;
             margin-bottom: 2rem;
-            background-color: rgba(255, 255, 255, 0.94);
+            background-color: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(2px);
             transition: all 0.3s ease;
         }
 
@@ -58,6 +59,7 @@
             transform: translateY(-4px);
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
             border-color: #2563eb;
+            background-color: rgba(255, 255, 255, 0.85);
         }
 
         .logo img {
@@ -81,15 +83,17 @@
         }
 
         .logo p {
-            color: #64748b;
+            color: #2d4a5a;
             font-size: 0.9rem;
             letter-spacing: 1px;
+            font-weight: 500;
         }
 
-        /* Section cards with hover animation */
+        /* Section cards - more transparent */
         section {
             margin-bottom: 2.5rem;
-            background: rgba(255, 255, 255, 0.94);
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(2px);
             border-radius: 16px;
             padding: 1.5rem;
             box-shadow: 0 1px 3px rgba(0,0,0,0.05);
@@ -99,14 +103,14 @@
         section:hover {
             transform: translateY(-3px);
             box-shadow: 0 8px 25px rgba(37, 99, 235, 0.15);
-            background: rgba(255, 255, 255, 0.98);
+            background: rgba(255, 255, 255, 0.85);
         }
 
         /* Headers with animated underline - BLUE */
         h2 {
             font-size: 1.5rem;
             margin-bottom: 1rem;
-            color: #2563eb;
+            color: #1e40af;
             border-left: 4px solid #2563eb;
             padding-left: 0.75rem;
             display: inline-block;
@@ -137,7 +141,7 @@
         }
 
         .contact-card {
-            background: rgba(248, 250, 252, 0.9);
+            background: rgba(248, 250, 252, 0.8);
             padding: 0.75rem 1rem;
             border-radius: 12px;
             flex: 1;
@@ -147,7 +151,7 @@
 
         .contact-card:hover {
             transform: translateY(-3px);
-            background: #dbeafe;
+            background: rgba(219, 234, 254, 0.9);
             box-shadow: 0 4px 10px rgba(37, 99, 235, 0.1);
         }
 
@@ -177,7 +181,7 @@
 
         .hours-list li, .price-list li {
             padding: 0.5rem 0;
-            border-bottom: 1px solid #e9ecef;
+            border-bottom: 1px solid rgba(203, 213, 225, 0.5);
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
@@ -194,12 +198,12 @@
 
         .price-list li:hover {
             transform: translateX(6px);
-            background: #dbeafe;
+            background: rgba(219, 234, 254, 0.8);
             border-radius: 8px;
         }
 
         .hours-list li:hover {
-            background: #f8fafc;
+            background: rgba(248, 250, 252, 0.7);
             border-radius: 8px;
             padding-left: 0.5rem;
         }
@@ -221,7 +225,7 @@
 
         /* Service area box */
         .service-area {
-            background: rgba(238, 242, 239, 0.9);
+            background: rgba(238, 242, 239, 0.7);
             border-radius: 12px;
             padding: 1rem;
             text-align: center;
@@ -232,18 +236,19 @@
 
         .service-area:hover {
             transform: scale(1.01);
-            background: #dbeafe;
+            background: rgba(219, 234, 254, 0.8);
             box-shadow: 0 4px 10px rgba(0,0,0,0.05);
         }
 
         footer {
             text-align: center;
             padding: 1.5rem;
-            color: rgba(108, 117, 125, 0.9);
+            color: rgba(255, 255, 255, 0.8);
             font-size: 0.8rem;
-            border-top: 1px solid rgba(226, 232, 240, 0.5);
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
             margin-top: 1rem;
             transition: color 0.2s ease;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
         }
 
         footer:hover {
@@ -305,7 +310,7 @@
             <li><span>🔧 Tail Repair</span><span>Starting At $110</span></li>
             <li><span>🔧 Pressure Damage</span><span>Starting At $90</span></li>
         </ul>
-        <p style="font-size: 0.85rem; color: #4a5b66; margin-top: 0.75rem;">*Final price depends on damage assessment</p>
+        <p style="font-size: 0.85rem; color: #2d4a5a; margin-top: 0.75rem;">*Final price depends on damage assessment</p>
     </section>
 
     <!-- Service Area -->
