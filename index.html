@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <title>Third Earth Surf | Corpus Christi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CC Surf Repair | Corpus Christi</title>
     <style>
         * {
             margin: 0;
@@ -13,25 +13,13 @@
 
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            background-image: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=2073&auto=format');
+            background-image: url('https://images.unsplash.com/photo-1502680390469-be75c86b636f?q=80&w=2070');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
+            background-repeat: no-repeat;
             color: #1e2a2e;
             line-height: 1.5;
-            min-height: 100vh;
-        }
-
-        /* Dark overlay to make text pop */
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.35);
-            z-index: -1;
         }
 
         .container {
@@ -40,65 +28,106 @@
             padding: 2rem 1.5rem;
         }
 
-        /* Logo section */
+        /* Logo area - textured card */
         .logo {
             text-align: center;
-            padding: 1.75rem;
-            background: rgba(255, 255, 255, 0.88);
-            backdrop-filter: blur(12px);
-            border-radius: 32px;
+            padding: 1.5rem;
+            border: none;
+            border-radius: 20px;
             margin-bottom: 2rem;
-            box-shadow: 0 12px 28px rgba(0,0,0,0.12);
-            border: 1px solid rgba(255,255,255,0.5);
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(2px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            background-image: repeating-linear-gradient(
+                45deg,
+                rgba(0, 0, 0, 0.02) 0px,
+                rgba(0, 0, 0, 0.02) 2px,
+                transparent 2px,
+                transparent 8px
+            );
         }
 
-        .logo img {
-            max-width: 100%;
-            max-height: 140px;
-            width: auto;
-            height: auto;
-            object-fit: contain;
-            margin-bottom: 0.75rem;
-        }
-
-        .logo h1 {
-            font-size: 1.8rem;
-            color: #0a2f2a;
-            letter-spacing: -0.3px;
-            margin-top: 0.25rem;
+        .logo:hover {
+            background: rgba(255, 254, 247, 0.96);
+            border-color: #3a8bb9;
+            box-shadow: 0 8px 24px rgba(58, 139, 185, 0.15);
+            transform: translateY(-2px);
         }
 
         .logo p {
-            color: #2c5a44;
-            font-size: 0.95rem;
-            font-weight: 500;
-            margin-top: 0.25rem;
+            color: #64748b;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
         }
 
-        /* Frosted glass cards — the "textured wave" look */
-        .card {
-            background: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(12px);
-            border-radius: 32px;
-            padding: 1.6rem;
-            margin-bottom: 1.6rem;
-            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
-            border: 1px solid rgba(255,255,255,0.5);
-            transition: all 0.25s ease;
+        .logo h1 {
+            font-size: 2rem;
+            color: #0f3b3c;
+            margin-top: 0.5rem;
         }
 
-        .card:hover {
-            transform: translateY(-4px);
+        hr {
+            border: none;
+            height: 1px;
+            background: #e2e8f0;
+            margin: 1rem 0;
+        }
+
+        /* Sections - textured cards */
+        section {
+            margin-bottom: 2.5rem;
             background: rgba(255, 255, 255, 0.92);
-            box-shadow: 0 14px 28px rgba(0,0,0,0.15);
+            backdrop-filter: blur(2px);
+            border-radius: 20px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            transition: transform 0.1s ease, box-shadow 0.2s ease;
+            cursor: pointer;
+            background-image: repeating-linear-gradient(
+                45deg,
+                rgba(0, 0, 0, 0.02) 0px,
+                rgba(0, 0, 0, 0.02) 2px,
+                transparent 2px,
+                transparent 8px
+            );
         }
 
+        section:hover {
+            box-shadow: 0 8px 28px rgba(58, 139, 185, 0.12);
+        }
+
+        section:active {
+            transform: scale(0.99);
+        }
+
+        /* Headers with wave underline */
         h2 {
             font-size: 1.5rem;
-            margin-bottom: 1.2rem;
-            color: #0f3b2c;
-            border-left: 5px solid #2c7a4a;
-            padding-left: 0.85rem;
+            margin-bottom: 1rem;
+            color: #1a5f7a;
+            border-left: 4px solid #1a5f7a;
+            padding-left: 0.75rem;
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #1a5f7a, #3a8bb9, #1a5f7a);
+            border-radius: 3px;
+            transition: width 0.3s ease;
+        }
+
+        h2:hover::after {
+            width: 100%;
         }
 
         /* Contact grid */
@@ -106,153 +135,181 @@
             display: flex;
             flex-wrap: wrap;
             gap: 1rem;
+            margin-bottom: 1rem;
         }
 
-        .contact-item {
-            background: rgba(255, 255, 255, 0.6);
-            backdrop-filter: blur(4px);
-            padding: 0.9rem 1.2rem;
-            border-radius: 24px;
+        .contact-card {
+            background: rgba(248, 250, 252, 0.9);
+            padding: 0.75rem 1rem;
+            border-radius: 12px;
             flex: 1;
-            min-width: 170px;
-            transition: all 0.2s;
+            min-width: 180px;
+            transition: all 0.2s ease;
         }
 
-        .contact-item:hover {
-            background: rgba(255, 255, 255, 0.85);
-            transform: scale(1.01);
+        .contact-card:hover {
+            box-shadow: 0 0 8px #3a8bb960;
+            transform: translateY(-2px);
+            background: rgba(248, 250, 252, 1);
         }
 
-        .contact-item strong {
-            color: #1a5a38;
+        .contact-card strong {
+            color: #1a5f7a;
             display: block;
-            font-size: 0.75rem;
+            font-size: 0.85rem;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 6px;
         }
 
-        .phone-link, .email-link {
+        /* Click-to-call phone link */
+        .call-link {
+            color: #1a5f7a;
             text-decoration: none;
             font-weight: 600;
-            color: #1a2e24;
-            font-size: 1rem;
         }
 
-        .phone-link:hover, .email-link:hover {
-            text-decoration: underline;
-            color: #0a4a2a;
+        .call-link:hover {
+            color: #3a8bb9;
         }
 
-        /* Hours & price lists */
+        /* Pulse animation on phone card */
+        .contact-card:first-child {
+            animation: softPulse 2s ease-in-out infinite;
+        }
+
+        @keyframes softPulse {
+            0%, 100% { background-color: rgba(248, 250, 252, 0.9); }
+            50% { background-color: rgba(227, 240, 247, 0.95); }
+        }
+
+        /* Hours list */
         .hours-list, .price-list {
             list-style: none;
         }
 
         .hours-list li, .price-list li {
-            padding: 0.7rem 0;
-            border-bottom: 1px solid rgba(0,0,0,0.08);
+            padding: 0.5rem 0;
+            border-bottom: 1px solid rgba(203, 213, 225, 0.6);
             display: flex;
             justify-content: space-between;
             flex-wrap: wrap;
-            font-size: 1rem;
         }
 
-        .hours-list li:last-child, .price-list li:last-child {
-            border-bottom: none;
+        .hours-list li span:first-child {
+            font-weight: 500;
+        }
+
+        .hours-list li span:last-child {
+            color: #1a5f7a;
+            font-weight: 600;
+        }
+
+        /* Price list with interactive slide */
+        .price-list li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid rgba(203, 213, 225, 0.6);
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            transition: transform 0.2s ease, background 0.2s ease;
+            cursor: pointer;
+        }
+
+        .price-list li:hover {
+            transform: translateX(8px);
+            background: rgba(238, 244, 248, 0.8);
+            border-radius: 8px;
         }
 
         .price-list li span:first-child {
             font-weight: 500;
-            display: flex;
-            align-items: center;
-            gap: 8px;
         }
 
         .price-list li span:last-child {
-            color: #1a5a38;
-            font-weight: 700;
+            color: #1a5f7a;
+            font-weight: 600;
+            transition: color 0.2s ease;
         }
 
-        .price-note {
-            font-size: 0.8rem;
-            color: #2c5a44;
-            margin-top: 0.75rem;
-            font-style: italic;
+        .price-list li:hover span:last-child {
+            color: #3a8bb9;
         }
 
+        /* Service area */
         .service-area {
-            background: rgba(30, 50, 30, 0.15);
-            border-radius: 24px;
+            background: rgba(238, 242, 239, 0.8);
+            border-radius: 12px;
             padding: 1rem;
             text-align: center;
-            font-weight: 500;
-            backdrop-filter: blur(4px);
+            font-style: italic;
+            transition: all 0.2s ease;
+            cursor: pointer;
         }
 
+        .service-area:active {
+            transform: scale(0.98);
+            background: rgba(227, 240, 247, 0.9);
+        }
+
+        /* Footer */
         footer {
             text-align: center;
             padding: 1.5rem;
-            color: #f0ebe0;
+            color: rgba(108, 117, 125, 0.9);
             font-size: 0.8rem;
-            text-shadow: 0px 1px 2px rgba(0,0,0,0.3);
+            border-top: 1px solid rgba(226, 232, 240, 0.5);
+            margin-top: 1rem;
         }
 
-        @media (max-width: 600px) {
-            .container {
-                padding: 1rem;
-            }
-            .card {
-                padding: 1.2rem;
-            }
-            h2 {
-                font-size: 1.3rem;
-            }
-            .logo h1 {
-                font-size: 1.4rem;
-            }
+        /* Wave divider between sections (subtle) */
+        .wave-divider {
+            text-align: center;
+            color: #3a8bb9;
+            font-size: 0.7rem;
+            letter-spacing: 6px;
+            margin: -1rem 0 1rem 0;
+            opacity: 0.4;
         }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <!-- Logo with your image -->
+    <!-- Logo area -->
     <div class="logo">
-        <img src="jesselogo.jpg" alt="Third Earth Surf Logo">
-        <h1>Third Earth Surf</h1>
+        <p>[ YOUR LOGO HERE ]</p>
+        <h1>CC Surf Repair</h1>
         <p>Corpus Christi & Surrounding Areas</p>
     </div>
 
-    <!-- Contact Card -->
-    <div class="card">
+    <!-- Contact Info -->
+    <section>
         <h2>Contact</h2>
         <div class="contact-grid">
-            <div class="contact-item">
-                <strong>📞 PHONE</strong><br>
-                <a href="tel:3614883614" class="phone-link">361-488-3614</a>
+            <div class="contact-card">
+                <strong>📞 Phone</strong><br>
+                <a href="tel:+13614883614" class="call-link">361-488-3614</a>
             </div>
-            <div class="contact-item">
-                <strong>✉️ EMAIL</strong><br>
-                <a href="mailto:ThirdEarthSurf@gmail.com" class="email-link">ThirdEarthSurf@gmail.com</a>
+            <div class="contact-card">
+                <strong>✉️ Email</strong><br>
+                CCSurfRepair@gmail.com
             </div>
-            <div class="contact-item">
-                <strong>📍 SERVICE AREA</strong><br>
+            <div class="contact-card">
+                <strong>📍 Service Area</strong><br>
                 Corpus Christi & nearby
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- Hours Card -->
-    <div class="card">
+    <!-- Hours -->
+    <section>
         <h2>Hours</h2>
         <ul class="hours-list">
             <li><span>Monday – Sunday</span><span>10:00 AM – 6:00 PM</span></li>
         </ul>
-    </div>
+    </section>
 
-    <!-- Prices Card — "Starting At" wording -->
-    <div class="card">
+    <!-- Prices -->
+    <section>
         <h2>Repair Prices</h2>
         <ul class="price-list">
             <li><span>🔧 Ding Repair</span><span>Starting At $100</span></li>
@@ -263,19 +320,27 @@
             <li><span>🔧 Tail Repair</span><span>Starting At $110</span></li>
             <li><span>🔧 Pressure Damage</span><span>Starting At $90</span></li>
         </ul>
-        <div class="price-note">*Final price depends on damage assessment</div>
-    </div>
+        <p style="font-size: 0.85rem; color: #4a5b66; margin-top: 0.75rem;">*Final price depends on damage assessment</p>
+    </section>
 
-    <!-- Service Area Card -->
-    <div class="card">
+    <!-- Service Area -->
+    <section>
         <h2>Service Area</h2>
         <div class="service-area">
-            🌊 Serving Corpus Christi, Padre Island, Port Aransas, and surrounding coastal communities
+            📍 Serving Corpus Christi, Padre Island, Port Aransas, and surrounding coastal communities.
         </div>
-    </div>
+    </section>
+
+    <!-- Optional: Small "Why Choose Us" blurb -->
+    <section>
+        <h2>Why Choose Us</h2>
+        <p style="text-align: center; font-style: italic; color: #4a5b66;">
+            🏄 Over 10 years of experience • Fast turnaround • Fair prices
+        </p>
+    </section>
 
     <footer>
-        Third Earth Surf — Professional repairs, fast turnaround
+        CC Surf Repair — Professional repairs, fast turnaround
     </footer>
 </div>
 
