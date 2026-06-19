@@ -1,5 +1,3 @@
-about.html
-
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -19,7 +17,7 @@ body {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     background-image: url('boib hall 2.jpg');
     background-size: cover;
-    background-position: center 30%;
+    background-position: center center;
     background-attachment: fixed;
     background-repeat: no-repeat;
     color: #1e2a2e;
@@ -28,8 +26,11 @@ body {
 
 @media (max-width: 768px) {
     body {
-        background-position: center 20%;
+        background-image: url('bob hall portrait.jpg');
+        background-size: cover;
+        background-position: center center;
         background-attachment: scroll;
+        background-repeat: no-repeat;
     }
 }
 
@@ -61,6 +62,13 @@ section {
     border-radius: 16px;
     padding: 1.5rem;
     margin-bottom: 2rem;
+    transition: 0.3s;
+}
+
+section:hover {
+    transform: translateY(-3px);
+    background: rgba(255,255,255,0.65);
+    box-shadow: 0 8px 25px rgba(37,99,235,0.2);
 }
 
 h1, h2 {
@@ -77,7 +85,7 @@ h1, h2 {
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 1rem;
 }
 
@@ -90,10 +98,27 @@ h1, h2 {
 
 .repair-card img {
     width: 100%;
-    height: 220px;
+    height: 250px;
     object-fit: cover;
     border-radius: 10px;
     margin-top: 0.5rem;
+}
+
+.contact-box {
+    background: rgba(248,250,252,0.7);
+    padding: 1rem;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.contact-box a {
+    color: #1e40af;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.contact-box a:hover {
+    text-decoration: underline;
 }
 
 footer {
@@ -107,57 +132,111 @@ footer {
 </head>
 
 <body>
+
 <div class="container">
 
-    <a href="index.html" class="back-button">← Back To Home</a>
+<a href="index.html" class="back-button">← Back To Home</a>
 
-    <section>
-        <h1>About Third Earth Surfboards</h1>
-        <div class="bio-box">
-            <p>
-                Third Earth Surfboards provides professional surfboard repair,
-                custom board work, and restoration services for Corpus Christi,
-                Padre Island, Port Aransas, and surrounding coastal communities.
-            </p>
+<section>
+    <h1>About Third Earth Surfboards</h1>
 
-            <p style="margin-top:1rem;">
-                Add Jesse's full bio here, including his shaping experience,
-                repair background, and what makes his work different.
-            </p>
+    <div class="bio-box">
+
+        <p>
+            Third Earth Surfboards specializes in professional surfboard repairs,
+            custom surfboard shaping, restorations, and epoxy board construction.
+        </p>
+
+        <br>
+
+        <p>
+            From minor dings and fin box repairs to complete restorations and
+            hand-shaped custom surfboards, every board receives the same level
+            of care and attention to detail.
+        </p>
+
+        <br>
+
+        <p>
+            Whether you're repairing a favorite board or looking for a custom
+            shape built from a raw foam blank, Third Earth Surfboards delivers
+            quality craftsmanship designed to get you back in the water.
+        </p>
+
+        <br>
+
+        <p>
+            <strong>
+                Replace this section with Jesse's personal bio, shaping
+                background, experience, and story.
+            </strong>
+        </p>
+
+    </div>
+</section>
+
+<section>
+    <h2>Before & After Repairs</h2>
+
+    <div class="gallery">
+
+        <div class="repair-card">
+            <h3>Repair Example #1 - Before</h3>
+            <img src="before1.jpg" alt="Before Repair">
         </div>
-    </section>
 
-    <section>
-        <h2>Before & After Repairs</h2>
-
-        <div class="gallery">
-            <div class="repair-card">
-                <h3>Repair #1 Before</h3>
-                <img src="before1.jpg" alt="Surfboard before repair">
-            </div>
-
-            <div class="repair-card">
-                <h3>Repair #1 After</h3>
-                <img src="after1.jpg" alt="Surfboard after repair">
-            </div>
-
-            <div class="repair-card">
-                <h3>Repair #2 Before</h3>
-                <img src="before2.jpg" alt="Surfboard before repair">
-            </div>
-
-            <div class="repair-card">
-                <h3>Repair #2 After</h3>
-                <img src="after2.jpg" alt="Surfboard after repair">
-            </div>
+        <div class="repair-card">
+            <h3>Repair Example #1 - After</h3>
+            <img src="after1.jpg" alt="After Repair">
         </div>
-    </section>
 
-    <footer>
-        Third Earth Surfboards — Professional repairs, custom boards, fast turnaround
-    </footer>
+        <div class="repair-card">
+            <h3>Repair Example #2 - Before</h3>
+            <img src="before2.jpg" alt="Before Repair">
+        </div>
+
+        <div class="repair-card">
+            <h3>Repair Example #2 - After</h3>
+            <img src="after2.jpg" alt="After Repair">
+        </div>
+
+    </div>
+</section>
+
+<section>
+    <h2>Contact Jesse</h2>
+
+    <div class="contact-box">
+
+        <p>
+            Questions about repairs, restorations, or custom board builds?
+        </p>
+
+        <br>
+
+        <p>
+            📞 <strong>Phone / Text:</strong>
+            <a href="tel:2108700545">210-870-0545</a>
+        </p>
+
+        <br>
+
+        <p>
+            ✉️ <strong>Email:</strong>
+            <a href="mailto:thirdearthsurfboards@gmail.com">
+                thirdearthsurfboards@gmail.com
+            </a>
+        </p>
+
+    </div>
+</section>
+
+<footer>
+    Third Earth Surfboards — Professional repairs, custom boards, fast turnaround
+</footer>
 
 </div>
+
 </body>
 </html>
 ```
