@@ -40,6 +40,32 @@ body {
     padding: 2rem 1.5rem;
 }
 
+.navbar,
+section {
+    background: rgba(255,255,255,0.45);
+    backdrop-filter: blur(3px);
+    border-radius: 16px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.navbar a {
+    color: #1e3a8a;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.navbar a:hover {
+    color: #2563eb;
+}
+
 .back-button {
     display: inline-block;
     margin-bottom: 1.5rem;
@@ -53,22 +79,6 @@ body {
 
 .back-button:hover {
     background: #1d4ed8;
-    text-decoration: none;
-}
-
-section {
-    background: rgba(255,255,255,0.45);
-    backdrop-filter: blur(3px);
-    border-radius: 16px;
-    padding: 1.5rem;
-    margin-bottom: 2rem;
-    transition: 0.3s;
-}
-
-section:hover {
-    transform: translateY(-3px);
-    background: rgba(255,255,255,0.65);
-    box-shadow: 0 8px 25px rgba(37,99,235,0.2);
 }
 
 h1, h2 {
@@ -76,21 +86,22 @@ h1, h2 {
     margin-bottom: 1rem;
 }
 
-.bio-box {
-    background: rgba(248,250,252,0.7);
+.bio-box,
+.contact-box,
+.note-box {
+    background: rgba(248,250,252,0.75);
     padding: 1rem;
     border-radius: 12px;
-    font-weight: 500;
 }
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
     gap: 1rem;
 }
 
 .repair-card {
-    background: rgba(248,250,252,0.7);
+    background: rgba(248,250,252,0.75);
     padding: 1rem;
     border-radius: 12px;
     text-align: center;
@@ -101,32 +112,33 @@ h1, h2 {
     height: 250px;
     object-fit: cover;
     border-radius: 10px;
-    margin-top: 0.5rem;
+    margin-top: 10px;
 }
 
-.contact-box {
-    background: rgba(248,250,252,0.7);
-    padding: 1rem;
-    border-radius: 12px;
-    text-align: center;
-}
-
-.contact-box a {
-    color: #1e40af;
+.floating-text {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #2563eb;
+    color: white;
+    padding: 14px 20px;
+    border-radius: 50px;
     text-decoration: none;
     font-weight: 700;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    z-index: 999;
 }
 
-.contact-box a:hover {
-    text-decoration: underline;
+.floating-text:hover {
+    background: #1d4ed8;
 }
 
 footer {
     text-align: center;
     padding: 1.5rem;
     color: white;
-    font-size: 0.8rem;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    font-size: 0.85rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
 }
 </style>
 </head>
@@ -137,11 +149,18 @@ footer {
 
 <a href="index.html" class="back-button">← Back To Home</a>
 
+<nav class="navbar">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="repairs.html">Repairs</a>
+    <a href="tel:2108700545">Call</a>
+    <a href="sms:2108700545">Text Jesse</a>
+</nav>
+
 <section>
     <h1>About Third Earth Surfboards</h1>
 
     <div class="bio-box">
-
         <p>
             Third Earth Surfboards specializes in professional surfboard repairs,
             custom surfboard shaping, restorations, and epoxy board construction.
@@ -152,7 +171,7 @@ footer {
         <p>
             From minor dings and fin box repairs to complete restorations and
             hand-shaped custom surfboards, every board receives the same level
-            of care and attention to detail.
+            of craftsmanship and attention to detail.
         </p>
 
         <br>
@@ -160,18 +179,17 @@ footer {
         <p>
             Whether you're repairing a favorite board or looking for a custom
             shape built from a raw foam blank, Third Earth Surfboards delivers
-            quality craftsmanship designed to get you back in the water.
+            quality work designed to get you back in the water.
         </p>
 
         <br>
 
         <p>
             <strong>
-                Replace this section with Jesse's personal bio, shaping
-                background, experience, and story.
+                Replace this section with Jesse's personal story, shaping
+                background, and experience.
             </strong>
         </p>
-
     </div>
 </section>
 
@@ -181,24 +199,50 @@ footer {
     <div class="gallery">
 
         <div class="repair-card">
-            <h3>Repair Example #1 - Before</h3>
+            <h3>Before Repair</h3>
             <img src="before1.jpg" alt="Before Repair">
         </div>
 
         <div class="repair-card">
-            <h3>Repair Example #1 - After</h3>
+            <h3>After Repair</h3>
             <img src="after1.jpg" alt="After Repair">
         </div>
 
         <div class="repair-card">
-            <h3>Repair Example #2 - Before</h3>
+            <h3>Before Repair</h3>
             <img src="before2.jpg" alt="Before Repair">
         </div>
 
         <div class="repair-card">
-            <h3>Repair Example #2 - After</h3>
+            <h3>After Repair</h3>
             <img src="after2.jpg" alt="After Repair">
         </div>
+
+    </div>
+</section>
+
+<section>
+    <h2>Built From Scratch</h2>
+
+    <div class="note-box">
+
+        <p>
+            Third Earth Surfboards builds custom surfboards from raw foam blanks,
+            creating one-of-a-kind boards tailored to each surfer.
+        </p>
+
+        <br>
+
+        <p>
+            Just like the boards, this website was custom programmed from scratch
+            rather than built from a generic template.
+        </p>
+
+        <br>
+
+        <p>
+            Site Programmed By ProCammer Rodriguez.
+        </p>
 
     </div>
 </section>
@@ -208,21 +252,12 @@ footer {
 
     <div class="contact-box">
 
-        <p>
-            Questions about repairs, restorations, or custom board builds?
-        </p>
+        <p>📞 Phone / Text: <a href="tel:2108700545">210-870-0545</a></p>
 
         <br>
 
         <p>
-            📞 <strong>Phone / Text:</strong>
-            <a href="tel:2108700545">210-870-0545</a>
-        </p>
-
-        <br>
-
-        <p>
-            ✉️ <strong>Email:</strong>
+            ✉️ Email:
             <a href="mailto:thirdearthsurfboards@gmail.com">
                 thirdearthsurfboards@gmail.com
             </a>
@@ -232,10 +267,13 @@ footer {
 </section>
 
 <footer>
-    Third Earth Surfboards — Professional repairs, custom boards, fast turnaround
+    <p>Third Earth Surfboards — Professional repairs, custom boards, fast turnaround</p>
+    <p>Site Programmed By ProCammer Rodriguez</p>
 </footer>
 
 </div>
+
+<a href="sms:2108700545" class="floating-text">📱 Text Jesse</a>
 
 </body>
 </html>
