@@ -39,6 +39,46 @@ body {
     padding: 2rem 1.5rem;
 }
 
+.navbar,
+.header,
+section,
+details {
+    background: rgba(255,255,255,0.45);
+    backdrop-filter: blur(3px);
+    border-radius: 16px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    transition: 0.3s;
+}
+
+.navbar:hover,
+.header:hover,
+section:hover,
+details:hover {
+    transform: translateY(-3px);
+    background: rgba(255,255,255,0.65);
+    box-shadow: 0 8px 25px rgba(37,99,235,0.2);
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 1rem;
+}
+
+.navbar a {
+    color: #1e3a8a;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.navbar a:hover {
+    color: #2563eb;
+    text-decoration: underline;
+}
+
 .back-button {
     display: inline-block;
     margin-bottom: 1.5rem;
@@ -52,16 +92,8 @@ body {
 
 .back-button:hover {
     background: #1d4ed8;
+    color: white;
     text-decoration: none;
-}
-
-.header, section {
-    background: rgba(255,255,255,0.45);
-    backdrop-filter: blur(3px);
-    border-radius: 16px;
-    padding: 1.5rem;
-    margin-bottom: 2rem;
-    transition: 0.3s;
 }
 
 .header {
@@ -78,10 +110,28 @@ body {
     color: #1a3a3a;
 }
 
-section:hover {
-    transform: translateY(-3px);
-    background: rgba(255,255,255,0.65);
-    box-shadow: 0 8px 25px rgba(37,99,235,0.2);
+summary {
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #1e3a8a;
+    list-style: none;
+    border-left: 4px solid #2563eb;
+    padding-left: 0.75rem;
+}
+
+summary::-webkit-details-marker {
+    display: none;
+}
+
+summary::after {
+    content: "  +";
+    color: #2563eb;
+    font-weight: 900;
+}
+
+details[open] summary::after {
+    content: "  −";
 }
 
 h2 {
@@ -94,6 +144,7 @@ h2 {
 
 .price-list {
     list-style: none;
+    margin-top: 1rem;
 }
 
 .price-list li {
@@ -134,12 +185,36 @@ h2 {
     text-decoration: underline;
 }
 
+.floating-text {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #2563eb;
+    color: white;
+    padding: 14px 20px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    z-index: 999;
+}
+
+.floating-text:hover {
+    background: #1d4ed8;
+    color: white;
+    text-decoration: none;
+}
+
 footer {
     text-align: center;
     padding: 1.5rem;
     color: rgba(255,255,255,0.9);
     font-size: 0.8rem;
     text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+
+footer p {
+    margin-bottom: 0.35rem;
 }
 </style>
 </head>
@@ -149,13 +224,21 @@ footer {
 
     <a href="index.html" class="back-button">← Back To Home</a>
 
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="repairs.html">Repairs</a>
+        <a href="tel:2108700545">Call</a>
+        <a href="sms:2108700545">Text Jesse</a>
+    </nav>
+
     <div class="header">
         <h1>Repairs & Pricing</h1>
         <p>Poly, Epoxy, SUP, and custom board starting prices</p>
     </div>
 
-    <section>
-        <h2>Poly Repairs</h2>
+    <details open>
+        <summary>🏄 Poly Repairs</summary>
         <ul class="price-list">
             <li><span>🔧 Simple Ding</span><span>Starting At $50</span></li>
             <li><span>🔧 Single Ding w/ Fill</span><span>Starting At $60</span></li>
@@ -173,10 +256,10 @@ footer {
             <li><span>🔧 Extra Dings w/ Fill</span><span>Starting At $20 Each</span></li>
             <li><span>🔧 Stripped Fin Screw</span><span>Starting At $10</span></li>
         </ul>
-    </section>
+    </details>
 
-    <section>
-        <h2>Epoxy Repairs</h2>
+    <details>
+        <summary>🏄 Epoxy Repairs</summary>
         <ul class="price-list">
             <li><span>🔧 Simple Ding</span><span>Starting At $60</span></li>
             <li><span>🔧 Single Ding w/ Fill</span><span>Starting At $70</span></li>
@@ -193,10 +276,10 @@ footer {
             <li><span>🔧 Extra Dings</span><span>Starting At $20 Each</span></li>
             <li><span>🔧 Extra Dings w/ Fill</span><span>Starting At $25 Each</span></li>
         </ul>
-    </section>
+    </details>
 
-    <section>
-        <h2>SUP Repairs</h2>
+    <details>
+        <summary>🏄 SUP Repairs</summary>
         <ul class="price-list">
             <li><span>🔧 Simple Repair w/ Fill</span><span>Starting At $100</span></li>
             <li><span>🔧 Large Complex Repair</span><span>Starting At $140</span></li>
@@ -204,16 +287,16 @@ footer {
             <li><span>🔧 Extra Dings</span><span>Starting At $30 Each</span></li>
             <li><span>🔧 Extra Dings w/ Fill</span><span>Starting At $40 Each</span></li>
         </ul>
-    </section>
+    </details>
 
-    <section>
-        <h2>Finish Options</h2>
+    <details>
+        <summary>🎨 Finish Options</summary>
         <ul class="price-list">
             <li><span>🎨 Paint</span><span>Starting At +25%</span></li>
             <li><span>✨ Polish</span><span>Starting At +25%</span></li>
             <li><span>🎨✨ Paint / Polish</span><span>Starting At +50%</span></li>
         </ul>
-    </section>
+    </details>
 
     <section>
         <h2>Custom Board Quotes</h2>
@@ -267,9 +350,13 @@ footer {
     </section>
 
     <footer>
-        Third Earth Surfboards — Professional repairs, custom boards, fast turnaround
+        <p>Third Earth Surfboards — Professional repairs, custom boards, fast turnaround</p>
+        <p>Site Programmed By ProCammer Rodriguez</p>
     </footer>
 
 </div>
+
+<a href="sms:2108700545" class="floating-text">📱 Text Jesse</a>
+
 </body>
 </html>
