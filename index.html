@@ -1,274 +1,180 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Third Earth Surfboards | Corpus Christi</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Third Earth Surfboards | Corpus Christi</title>
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-            background-image: url('boib hall 2.jpg');
-            background-size: cover;
-            background-position: center 30%;
-            background-attachment: fixed;
-            background-repeat: no-repeat;
-            color: #1e2a2e;
-            line-height: 1.5;
-        }
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-        /* Mobile fix */
-        @media (max-width: 768px) {
-            body {
-                background-position: center 20%;
-                background-attachment: scroll;
-            }
-        }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-image: url('boib hall 2.jpg');
+    background-size: cover;
+    background-position: center 30%;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: #1e2a2e;
+    line-height: 1.5;
+}
 
-        @media (max-width: 768px) and (min-height: 700px) {
-            body {
-                background-position: center 15%;
-            }
-        }
+@media (max-width: 768px) {
+    body {
+        background-position: center 20%;
+        background-attachment: scroll;
+    }
+}
 
-        .container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 2rem 1.5rem;
-        }
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+}
 
-        /* Logo area - highly transparent */
-        .logo {
-            text-align: center;
-            padding: 1.5rem;
-            border: 2px solid rgba(255, 255, 255, 0.4);
-            border-radius: 12px;
-            margin-bottom: 2rem;
-            background-color: rgba(255, 255, 255, 0.4);
-            backdrop-filter: blur(3px);
-            transition: all 0.3s ease;
-        }
+.logo, section {
+    background: rgba(255,255,255,0.4);
+    backdrop-filter: blur(3px);
+    border-radius: 16px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    transition: 0.3s;
+}
 
-        .logo:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-            border-color: #2563eb;
-            background-color: rgba(255, 255, 255, 0.6);
-        }
+.logo {
+    text-align: center;
+    border: 2px solid rgba(255,255,255,0.4);
+}
 
-        .logo img {
-            max-width: 100%;
-            max-height: 140px;
-            width: auto;
-            height: auto;
-            object-fit: contain;
-            margin-bottom: 0.5rem;
-            transition: transform 0.3s ease;
-        }
+.logo:hover, section:hover {
+    transform: translateY(-3px);
+    background: rgba(255,255,255,0.6);
+    box-shadow: 0 8px 25px rgba(37,99,235,0.2);
+}
 
-        .logo:hover img {
-            transform: scale(1.02);
-        }
+.logo img {
+    max-width: 100%;
+    max-height: 140px;
+    object-fit: contain;
+}
 
-        .logo h1 {
-            font-size: 2rem;
-            color: #0a2a2a;
-            margin-top: 0.5rem;
-            text-shadow: 1px 1px 2px rgba(255,255,255,0.5);
-        }
+.logo h1 {
+    font-size: 2rem;
+    color: #0a2a2a;
+}
 
-        .logo p {
-            color: #1a3a3a;
-            font-size: 0.9rem;
-            letter-spacing: 1px;
-            font-weight: 600;
-            text-shadow: 1px 1px 1px rgba(255,255,255,0.4);
-        }
+.logo p {
+    color: #1a3a3a;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    font-weight: 600;
+}
 
-        /* Section cards - highly transparent */
-        section {
-            margin-bottom: 2.5rem;
-            background: rgba(255, 255, 255, 0.4);
-            backdrop-filter: blur(3px);
-            border-radius: 16px;
-            padding: 1.5rem;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-            transition: all 0.3s ease;
-        }
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #1e3a8a;
+    border-left: 4px solid #2563eb;
+    padding-left: 0.75rem;
+}
 
-        section:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(37, 99, 235, 0.2);
-            background: rgba(255, 255, 255, 0.6);
-        }
+.contact-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
 
-        /* Headers */
-        h2 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: #1e3a8a;
-            border-left: 4px solid #2563eb;
-            padding-left: 0.75rem;
-            display: inline-block;
-            position: relative;
-            text-shadow: 1px 1px 1px rgba(255,255,255,0.3);
-        }
+.contact-card {
+    background: rgba(248,250,252,0.6);
+    padding: 0.75rem 1rem;
+    border-radius: 12px;
+    flex: 1;
+    min-width: 180px;
+}
 
-        h2::after {
-            content: '';
-            position: absolute;
-            bottom: -4px;
-            left: 0;
-            width: 0%;
-            height: 2px;
-            background: #2563eb;
-            transition: width 0.3s ease;
-        }
+.contact-card strong {
+    color: #1e40af;
+    display: block;
+    font-size: 0.85rem;
+}
 
-        section:hover h2::after {
-            width: 100%;
-        }
+a {
+    color: #0f172a;
+    text-decoration: none;
+    font-weight: 500;
+}
 
-        /* Contact grid */
-        .contact-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            margin-bottom: 1rem;
-        }
+a:hover {
+    color: #2563eb;
+    text-decoration: underline;
+}
 
-        .contact-card {
-            background: rgba(248, 250, 252, 0.6);
-            padding: 0.75rem 1rem;
-            border-radius: 12px;
-            flex: 1;
-            min-width: 180px;
-            transition: all 0.25s ease;
-        }
+.about-button {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 12px 24px;
+    background: #2563eb;
+    color: white;
+    border-radius: 10px;
+    font-weight: 700;
+}
 
-        .contact-card:hover {
-            transform: translateY(-3px);
-            background: rgba(219, 234, 254, 0.8);
-            box-shadow: 0 4px 10px rgba(37, 99, 235, 0.15);
-        }
+.about-button:hover {
+    background: #1d4ed8;
+    color: white;
+    text-decoration: none;
+}
 
-        .contact-card strong {
-            color: #1e40af;
-            display: block;
-            font-size: 0.85rem;
-            text-transform: uppercase;
-        }
+.hours-list, .price-list {
+    list-style: none;
+}
 
-        /* Phone and email links */
-        .phone-link, .contact-card a {
-            color: #0f172a;
-            text-decoration: none;
-            transition: all 0.2s ease;
-            font-weight: 500;
-        }
+.hours-list li, .price-list li {
+    padding: 0.5rem;
+    border-bottom: 1px solid rgba(100,116,139,0.3);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-radius: 8px;
+    font-weight: 500;
+}
 
-        .phone-link:hover, .contact-card a:hover {
-            color: #2563eb;
-            text-decoration: underline;
-        }
+.price-list li:hover {
+    transform: translateX(6px);
+    background: rgba(219,234,254,0.7);
+}
 
-        /* Hours list */
-        .hours-list, .price-list {
-            list-style: none;
-        }
+.price-list li span:last-child {
+    color: #1e40af;
+    font-weight: 700;
+}
 
-        .hours-list li, .price-list li {
-            padding: 0.5rem 0;
-            border-bottom: 1px solid rgba(100, 116, 139, 0.3);
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            transition: all 0.2s ease;
-            border-radius: 8px;
-            font-weight: 500;
-        }
+.service-area {
+    background: rgba(238,242,239,0.5);
+    border-radius: 12px;
+    padding: 1rem;
+    text-align: center;
+    font-style: italic;
+    font-weight: 500;
+}
 
-        /* Price list rows */
-        .price-list li {
-            cursor: pointer;
-            padding: 0.5rem 0.5rem;
-            margin: 0 -0.5rem;
-        }
-
-        .price-list li:hover {
-            transform: translateX(6px);
-            background: rgba(219, 234, 254, 0.7);
-            border-radius: 8px;
-        }
-
-        .hours-list li:hover {
-            background: rgba(248, 250, 252, 0.5);
-            border-radius: 8px;
-            padding-left: 0.5rem;
-        }
-
-        .price-list li span:first-child {
-            font-weight: 500;
-        }
-
-        .price-list li span:last-child {
-            color: #1e40af;
-            font-weight: 700;
-            transition: transform 0.2s ease;
-        }
-
-        .price-list li:hover span:last-child {
-            transform: scale(1.02);
-            color: #1d4ed8;
-        }
-
-        /* Service area box */
-        .service-area {
-            background: rgba(238, 242, 239, 0.5);
-            border-radius: 12px;
-            padding: 1rem;
-            text-align: center;
-            font-style: italic;
-            transition: all 0.25s ease;
-            cursor: pointer;
-            font-weight: 500;
-        }
-
-        .service-area:hover {
-            transform: scale(1.01);
-            background: rgba(219, 234, 254, 0.7);
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-        }
-
-        footer {
-            text-align: center;
-            padding: 1.5rem;
-            color: rgba(255, 255, 255, 0.9);
-            font-size: 0.8rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.2);
-            margin-top: 1rem;
-            transition: color 0.2s ease;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
-            font-weight: 500;
-        }
-
-        footer:hover {
-            color: #2563eb;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-    </style>
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    color: rgba(255,255,255,0.9);
+    font-size: 0.8rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+}
+</style>
 </head>
-<body>
 
+<body>
 <div class="container">
+
     <div class="logo">
         <img src="jesselogo.jpg" alt="Third Earth Surfboards Logo">
         <h1>Third Earth Surfboards</h1>
@@ -276,11 +182,20 @@
     </div>
 
     <section>
+        <h2>About Us</h2>
+        <p>
+            Learn more about Third Earth Surfboards, our repair process,
+            and see before-and-after photos of real surfboard repairs.
+        </p>
+        <a href="about.html" class="about-button">View About Us →</a>
+    </section>
+
+    <section>
         <h2>Schedule An Appointment Below</h2>
         <div class="contact-grid">
             <div class="contact-card">
                 <strong>📞 PHONE</strong><br>
-                <a href="tel:3614883614" class="phone-link">361-488-3614</a>
+                <a href="tel:3614883614">361-488-3614</a>
             </div>
             <div class="contact-card">
                 <strong>✉️ EMAIL</strong><br>
@@ -311,7 +226,9 @@
             <li><span>🔧 Tail Repair</span><span>Starting At $110</span></li>
             <li><span>🔧 Pressure Damage</span><span>Starting At $90</span></li>
         </ul>
-        <p style="font-size: 0.85rem; color: #0f2a2a; margin-top: 0.75rem; font-weight: 500;">*Final price depends on damage assessment</p>
+        <p style="font-size:0.85rem; margin-top:0.75rem; font-weight:500;">
+            *Final price depends on damage assessment
+        </p>
     </section>
 
     <section>
@@ -324,7 +241,7 @@
     <footer>
         Third Earth Surfboards — Professional repairs, fast turnaround
     </footer>
-</div>
 
+</div>
 </body>
 </html>
