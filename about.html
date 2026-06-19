@@ -1,3 +1,6 @@
+about.html
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,10 +26,33 @@ body {
     line-height: 1.5;
 }
 
+@media (max-width: 768px) {
+    body {
+        background-position: center 20%;
+        background-attachment: scroll;
+    }
+}
+
 .container {
     max-width: 1100px;
     margin: 0 auto;
     padding: 2rem 1.5rem;
+}
+
+.back-button {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    padding: 12px 24px;
+    background: #2563eb;
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.back-button:hover {
+    background: #1d4ed8;
+    text-decoration: none;
 }
 
 section {
@@ -42,22 +68,11 @@ h1, h2 {
     margin-bottom: 1rem;
 }
 
-.back-button {
-    display: inline-block;
-    margin-bottom: 1rem;
-    padding: 10px 18px;
-    background: #2563eb;
-    color: white;
-    border-radius: 10px;
-    text-decoration: none;
-    font-weight: 700;
-}
-
 .bio-box {
-    min-height: 160px;
     background: rgba(248,250,252,0.7);
     padding: 1rem;
     border-radius: 12px;
+    font-weight: 500;
 }
 
 .gallery {
@@ -100,15 +115,14 @@ footer {
         <h1>About Third Earth Surfboards</h1>
         <div class="bio-box">
             <p>
-                <!-- Put the bio here -->
-                Third Earth Surfboards provides professional surfboard repair
-                services for Corpus Christi, Padre Island, Port Aransas, and
-                surrounding coastal communities.
+                Third Earth Surfboards provides professional surfboard repair,
+                custom board work, and restoration services for Corpus Christi,
+                Padre Island, Port Aransas, and surrounding coastal communities.
             </p>
 
             <p style="margin-top:1rem;">
-                Add Jesse's personal bio here, including experience, repair style,
-                and what makes the shop different.
+                Add Jesse's full bio here, including his shaping experience,
+                repair background, and what makes his work different.
             </p>
         </div>
     </section>
@@ -140,9 +154,10 @@ footer {
     </section>
 
     <footer>
-        Third Earth Surfboards — Professional repairs, fast turnaround
+        Third Earth Surfboards — Professional repairs, custom boards, fast turnaround
     </footer>
 
 </div>
 </body>
 </html>
+```
