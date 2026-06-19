@@ -1,275 +1,62 @@
-repairs.html
-
 ```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Repairs & Pricing | Third Earth Surfboards</title>
+<section>
+    <h2>Poly Repairs</h2>
+    <ul class="price-list">
+        <li><span>🔧 Simple Ding</span><span>Starting At $50</span></li>
+        <li><span>🔧 Single Ding w/ Fill</span><span>Starting At $60</span></li>
+        <li><span>🔧 Large Ding w/ Fill</span><span>Starting At $80</span></li>
+        <li><span>🔧 Leash Plug</span><span>Starting At $55</span></li>
+        <li><span>🔧 Fin Box</span><span>Starting At $70</span></li>
+        <li><span>🔧 Additional Fin Box</span><span>Starting At $50</span></li>
+        <li><span>🔧 Single Fin Box Replacement</span><span>Starting At $110</span></li>
+        <li><span>🔧 Broken Nose</span><span>Starting At $120</span></li>
+        <li><span>🔧 Buckle</span><span>Starting At $100</span></li>
+        <li><span>🔧 Glass-On Fin Repair</span><span>Starting At $125</span></li>
+        <li><span>🔧 Broken Board</span><span>Starting At $250</span></li>
+        <li><span>🔧 Delamination</span><span>Starting At $175</span></li>
+        <li><span>🔧 Extra Dings</span><span>Starting At $15 Each</span></li>
+        <li><span>🔧 Extra Dings w/ Fill</span><span>Starting At $20 Each</span></li>
+        <li><span>🔧 Stripped Fin Screw</span><span>Starting At $10</span></li>
+    </ul>
+</section>
 
-<style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+<section>
+    <h2>Epoxy Repairs</h2>
+    <ul class="price-list">
+        <li><span>🔧 Simple Ding</span><span>Starting At $60</span></li>
+        <li><span>🔧 Single Ding w/ Fill</span><span>Starting At $70</span></li>
+        <li><span>🔧 Large Ding w/ Fill</span><span>Starting At $90</span></li>
+        <li><span>🔧 Leash Plug</span><span>Starting At $60</span></li>
+        <li><span>🔧 Side Box</span><span>Starting At $80</span></li>
+        <li><span>🔧 Additional Side Box</span><span>Starting At $60</span></li>
+        <li><span>🔧 Single Fin Box Replacement</span><span>Starting At $120</span></li>
+        <li><span>🔧 Broken Nose</span><span>Starting At $140</span></li>
+        <li><span>🔧 Buckle</span><span>Starting At $120</span></li>
+        <li><span>🔧 Glass-On Fin Repair</span><span>Starting At $150</span></li>
+        <li><span>🔧 Broken Board</span><span>Starting At $275</span></li>
+        <li><span>🔧 Delamination</span><span>Starting At $200</span></li>
+        <li><span>🔧 Extra Dings</span><span>Starting At $20 Each</span></li>
+        <li><span>🔧 Extra Dings w/ Fill</span><span>Starting At $25 Each</span></li>
+    </ul>
+</section>
 
-body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-    background-image: url('boib hall 2.jpg');
-    background-size: cover;
-    background-position: center 30%;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    color: #1e2a2e;
-    line-height: 1.5;
-}
+<section>
+    <h2>SUP Repairs</h2>
+    <ul class="price-list">
+        <li><span>🔧 Simple Repair w/ Fill</span><span>Starting At $100</span></li>
+        <li><span>🔧 Large Complex Repair</span><span>Starting At $140</span></li>
+        <li><span>🔧 Fin Box</span><span>Starting At $200</span></li>
+        <li><span>🔧 Extra Dings</span><span>Starting At $30 Each</span></li>
+        <li><span>🔧 Extra Dings w/ Fill</span><span>Starting At $40 Each</span></li>
+    </ul>
+</section>
 
-@media (max-width: 768px) {
-    body {
-        background-position: center 20%;
-        background-attachment: scroll;
-    }
-}
-
-.container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 2rem 1.5rem;
-}
-
-.back-button {
-    display: inline-block;
-    margin-bottom: 1.5rem;
-    padding: 12px 24px;
-    background: #2563eb;
-    color: white;
-    border-radius: 10px;
-    text-decoration: none;
-    font-weight: 700;
-}
-
-.back-button:hover {
-    background: #1d4ed8;
-    text-decoration: none;
-}
-
-.header, section {
-    background: rgba(255,255,255,0.45);
-    backdrop-filter: blur(3px);
-    border-radius: 16px;
-    padding: 1.5rem;
-    margin-bottom: 2rem;
-    transition: 0.3s;
-}
-
-.header {
-    text-align: center;
-}
-
-.header h1 {
-    color: #0a2a2a;
-    font-size: 2rem;
-}
-
-.header p {
-    font-weight: 600;
-    color: #1a3a3a;
-}
-
-section:hover {
-    transform: translateY(-3px);
-    background: rgba(255,255,255,0.65);
-    box-shadow: 0 8px 25px rgba(37,99,235,0.2);
-}
-
-h2 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    color: #1e3a8a;
-    border-left: 4px solid #2563eb;
-    padding-left: 0.75rem;
-}
-
-.price-list {
-    list-style: none;
-}
-
-.price-list li {
-    padding: 0.6rem;
-    border-bottom: 1px solid rgba(100,116,139,0.3);
-    display: flex;
-    justify-content: space-between;
-    gap: 1rem;
-    flex-wrap: wrap;
-    border-radius: 8px;
-    font-weight: 500;
-}
-
-.price-list li:hover {
-    transform: translateX(6px);
-    background: rgba(219,234,254,0.7);
-}
-
-.price-list li span:last-child {
-    color: #1e40af;
-    font-weight: 700;
-}
-
-.note-box {
-    background: rgba(238,242,239,0.55);
-    border-radius: 12px;
-    padding: 1rem;
-    font-weight: 500;
-}
-
-.note-box a {
-    color: #1e40af;
-    font-weight: 700;
-    text-decoration: none;
-}
-
-.note-box a:hover {
-    text-decoration: underline;
-}
-
-footer {
-    text-align: center;
-    padding: 1.5rem;
-    color: rgba(255,255,255,0.9);
-    font-size: 0.8rem;
-    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
-}
-</style>
-</head>
-
-<body>
-<div class="container">
-
-    <a href="index.html" class="back-button">← Back To Home</a>
-
-    <div class="header">
-        <h1>Repairs & Pricing</h1>
-        <p>Poly, Epoxy, SUP, and custom board pricing</p>
-    </div>
-
-    <section>
-        <h2>Poly Repairs</h2>
-        <ul class="price-list">
-            <li><span>🔧 Simple Ding</span><span>$50 - $60</span></li>
-            <li><span>🔧 Single Ding w/ Fill</span><span>$60 - $75</span></li>
-            <li><span>🔧 Large Ding w/ Fill</span><span>$80 - $100</span></li>
-            <li><span>🔧 Leash Plug</span><span>$55</span></li>
-            <li><span>🔧 Fin Box</span><span>$70</span></li>
-            <li><span>🔧 Additional Fin Box</span><span>+$50 per additional box</span></li>
-            <li><span>🔧 Single Fin Box Replacement</span><span>$110 - $130</span></li>
-            <li><span>🔧 Broken Nose</span><span>$120 - $140</span></li>
-            <li><span>🔧 Buckle</span><span>$100 - $120+</span></li>
-            <li><span>🔧 Glass-On Fin Repair</span><span>$125</span></li>
-            <li><span>🔧 Broken Board</span><span>$250 - $300</span></li>
-            <li><span>🔧 Delamination</span><span>$175+</span></li>
-            <li><span>🔧 Extra Dings</span><span>+$15 each</span></li>
-            <li><span>🔧 Extra Dings w/ Fill</span><span>+$20 each</span></li>
-            <li><span>🔧 Stripped Fin Screw</span><span>$10 - $20</span></li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>Epoxy Repairs</h2>
-        <ul class="price-list">
-            <li><span>🔧 Simple Ding</span><span>$60</span></li>
-            <li><span>🔧 Single Ding w/ Fill</span><span>$70 - $85</span></li>
-            <li><span>🔧 Large Ding w/ Fill</span><span>$90 - $110</span></li>
-            <li><span>🔧 Leash Plug</span><span>$60</span></li>
-            <li><span>🔧 Side Box</span><span>$80</span></li>
-            <li><span>🔧 Additional Side Box</span><span>+$60 per additional box</span></li>
-            <li><span>🔧 Single Fin Box Replacement</span><span>$120 - $140</span></li>
-            <li><span>🔧 Broken Nose</span><span>$140 - $160</span></li>
-            <li><span>🔧 Buckle</span><span>$120 - $140+</span></li>
-            <li><span>🔧 Glass-On Fin Repair</span><span>$150</span></li>
-            <li><span>🔧 Broken Board</span><span>$275 - $350</span></li>
-            <li><span>🔧 Delamination</span><span>$200+</span></li>
-            <li><span>🔧 Extra Dings</span><span>+$20 each</span></li>
-            <li><span>🔧 Extra Dings w/ Fill</span><span>+$25 each</span></li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>SUP Repairs</h2>
-        <ul class="price-list">
-            <li><span>🔧 Simple Repair w/ Fill</span><span>$100 - $120</span></li>
-            <li><span>🔧 Large Complex Repair</span><span>$140 - $160</span></li>
-            <li><span>🔧 Fin Box</span><span>$200</span></li>
-            <li><span>🔧 Extra Dings</span><span>+$30 each</span></li>
-            <li><span>🔧 Extra Dings w/ Fill</span><span>+$40 each</span></li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>Finish Options</h2>
-        <ul class="price-list">
-            <li><span>🎨 Paint</span><span>+25%</span></li>
-            <li><span>✨ Polish</span><span>+25%</span></li>
-            <li><span>🎨✨ Paint / Polish</span><span>+50%</span></li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>Custom Board Quotes</h2>
-        <div class="note-box">
-            <p>
-                Looking for a completely custom surfboard?
-            </p>
-
-            <br>
-
-            <p>
-                Third Earth Surfboards offers custom board builds from scratch,
-                including hand-shaped boards built from raw foam blanks and custom
-                epoxy constructions tailored to your surfing style and conditions.
-            </p>
-
-            <br>
-
-            <p>
-                Custom board work, restorations, vintage boards, major damage,
-                and repairs not listed above are quoted individually.
-            </p>
-
-            <br>
-
-            <p>
-                Email or text photos, dimensions, and details for a custom quote.
-            </p>
-
-            <br>
-
-            <p>
-                📞 <strong>Text:</strong>
-                <a href="tel:2108700545">210-870-0545</a>
-            </p>
-
-            <p>
-                ✉️ <strong>Email:</strong>
-                <a href="mailto:thirdearthsurfboards@gmail.com">thirdearthsurfboards@gmail.com</a>
-            </p>
-        </div>
-    </section>
-
-    <section>
-        <h2>Important Notes</h2>
-        <div class="note-box">
-            Prices may vary depending on board condition, repair complexity,
-            materials needed, and damage found after inspection.
-        </div>
-    </section>
-
-    <footer>
-        Third Earth Surfboards — Professional repairs, custom boards, fast turnaround
-    </footer>
-
-</div>
-</body>
-</html>
+<section>
+    <h2>Finish Options</h2>
+    <ul class="price-list">
+        <li><span>🎨 Paint</span><span>Starting At +25%</span></li>
+        <li><span>✨ Polish</span><span>Starting At +25%</span></li>
+        <li><span>🎨✨ Paint / Polish</span><span>Starting At +50%</span></li>
+    </ul>
+</section>
 ```
