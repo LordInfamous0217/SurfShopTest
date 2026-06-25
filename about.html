@@ -1,28 +1,23 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>About Us | Third Earth Surfboards</title>
-
 <meta name="description" content="Learn about Third Earth Surfboards, local surfboard repairs, custom board builds, restorations, and surfboard shaping in Corpus Christi and surrounding coastal communities.">
-
-<meta property="og:title" content="About Third Earth Surfboards">
-<meta property="og:description" content="Professional surfboard repairs, custom board builds, restorations, and hand-shaped surfboards from raw foam blanks.">
+<meta property="og:title" content="About Us | Third Earth Surfboards">
+<meta property="og:description" content="Learn about Third Earth Surfboards, local surfboard repairs, custom board builds, restorations, and surfboard shaping in Corpus Christi and surrounding coastal communities.">
 <meta property="og:image" content="https://thirdearthsurfboards.com/jesselogo.jpg">
 <meta property="og:url" content="https://thirdearthsurfboards.com/about.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Third Earth Surfboards">
-
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="About Third Earth Surfboards">
-<meta name="twitter:description" content="Professional surfboard repairs, custom board builds, restorations, and hand-shaped surfboards from raw foam blanks.">
+<meta name="twitter:title" content="About Us | Third Earth Surfboards">
+<meta name="twitter:description" content="Learn about Third Earth Surfboards, local surfboard repairs, custom board builds, restorations, and surfboard shaping in Corpus Christi and surrounding coastal communities.">
 <meta name="twitter:image" content="https://thirdearthsurfboards.com/jesselogo.jpg">
-
 <meta name="theme-color" content="#2563eb">
-
 <style>
+
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body {
@@ -42,7 +37,7 @@ body {
     }
 }
 .container { max-width: 1100px; margin: 0 auto; padding: 2rem 1.5rem 6rem; }
-.logo, section, .navbar {
+.logo, section, .navbar, .header, details {
     background: rgba(255,255,255,0.72);
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
@@ -53,7 +48,7 @@ body {
     box-shadow: 0 8px 25px rgba(15,23,42,0.10);
     transition: 0.25s ease;
 }
-.logo:hover, section:hover, .navbar:hover {
+.logo:hover, section:hover, .navbar:hover, .header:hover, details:hover {
     transform: translateY(-2px);
     background: rgba(255,255,255,0.82);
     box-shadow: 0 10px 28px rgba(37,99,235,0.18);
@@ -62,135 +57,37 @@ body {
 .logo img { max-width: 100%; max-height: 145px; object-fit: contain; margin-bottom: 0.5rem; }
 .logo h1 { font-size: clamp(2rem, 5vw, 3rem); color: #082f49; line-height: 1.1; }
 .logo p { color: #164e63; font-size: 0.95rem; letter-spacing: 1px; font-weight: 800; text-transform: uppercase; }
-.navbar {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-    padding: 1rem;
-    position: sticky;
-    top: 10px;
-    z-index: 10;
-}
+.navbar { display: flex; justify-content: center; flex-wrap: wrap; gap: 1rem; padding: 1rem; position: sticky; top: 10px; z-index: 10; }
 .navbar a, a { color: #0f172a; text-decoration: none; font-weight: 700; }
 .navbar a { color: #1e3a8a; }
-a:hover, .navbar a:hover { color: #2563eb; text-decoration: underline; }
-h2 {
-    font-size: 1.5rem;
-    margin-bottom: 0.85rem;
-    color: #1e3a8a;
-    border-left: 4px solid #2563eb;
-    padding-left: 0.75rem;
-}
+a:hover, .navbar a:hover, .navbar a.active { color: #2563eb; text-decoration: underline; }
+h2 { font-size: 1.5rem; margin-bottom: 0.85rem; color: #1e3a8a; border-left: 4px solid #2563eb; padding-left: 0.75rem; }
 p { margin-bottom: 0.6rem; }
-.hero { text-align: center; padding: 2rem 1.5rem; }
-.hero h2 {
-    border-left: 0;
-    padding-left: 0;
-    font-size: clamp(1.9rem, 5vw, 3rem);
-    line-height: 1.1;
-    margin-bottom: 0.75rem;
-    color: #082f49;
-}
-.hero p {
-    max-width: 760px;
-    margin: 0 auto 1rem;
-    font-size: 1.05rem;
-    font-weight: 600;
-    color: #14333f;
-}
-.button-row {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 0.75rem;
-    margin-top: 1rem;
-}
-.button {
-    display: inline-block;
-    padding: 12px 22px;
-    background: #2563eb;
-    color: white;
-    border-radius: 999px;
-    font-weight: 800;
-    box-shadow: 0 6px 18px rgba(37,99,235,0.25);
-}
-.button:hover {
-    background: #1d4ed8;
-    color: white;
-    text-decoration: none;
-    transform: translateY(-1px);
-}
+.hero, .header { text-align: center; padding: 2rem 1.5rem; }
+.hero h2 { border-left: 0; padding-left: 0; font-size: clamp(1.9rem, 5vw, 3rem); line-height: 1.1; margin-bottom: 0.75rem; color: #082f49; }
+.header h1 { color: #082f49; font-size: clamp(1.9rem, 5vw, 3rem); line-height: 1.1; margin-bottom: 0.75rem; }
+.hero p, .header p { max-width: 760px; margin: 0 auto 1rem; font-size: 1.05rem; font-weight: 600; color: #14333f; }
+.button-row { display: flex; justify-content: center; flex-wrap: wrap; gap: 0.75rem; margin-top: 1rem; }
+.button, .back-button { display: inline-block; padding: 12px 22px; background: #2563eb; color: white; border-radius: 999px; font-weight: 800; box-shadow: 0 6px 18px rgba(37,99,235,0.25); text-decoration: none; border: none; cursor: pointer; }
+.button:hover, .back-button:hover { background: #1d4ed8; color: white; text-decoration: none; transform: translateY(-1px); }
 .button.secondary { background: rgba(15,23,42,0.9); }
-.contact-grid, .service-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-    gap: 1rem;
-}
-.contact-card, .service-card {
-    background: rgba(248,250,252,0.72);
-    padding: 1rem;
-    border-radius: 14px;
-    border: 1px solid rgba(148,163,184,0.25);
-}
-.contact-card strong, .service-card strong {
-    color: #1e40af;
-    display: block;
-    font-size: 0.9rem;
-    margin-bottom: 0.25rem;
-}
+.contact-grid, .service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 1rem; }
+.contact-card, .service-card { background: rgba(248,250,252,0.72); padding: 1rem; border-radius: 14px; border: 1px solid rgba(148,163,184,0.25); }
+.contact-card strong, .service-card strong { color: #1e40af; display: block; font-size: 0.9rem; margin-bottom: 0.25rem; }
 .hours-list { list-style: none; }
-.hours-list li {
-    padding: 0.7rem;
-    border-bottom: 1px solid rgba(100,116,139,0.25);
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    border-radius: 8px;
-    font-weight: 600;
-}
-.service-area {
-    background: rgba(238,242,239,0.72);
-    border-radius: 12px;
-    padding: 1rem;
-    text-align: center;
-    font-style: italic;
-    font-weight: 700;
-}
-.floating-text {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #2563eb;
-    color: white;
-    padding: 14px 20px;
-    border-radius: 999px;
-    text-decoration: none;
-    font-weight: 900;
-    box-shadow: 0 4px 18px rgba(0,0,0,0.35);
-    z-index: 999;
-}
+.hours-list li { padding: 0.7rem; border-bottom: 1px solid rgba(100,116,139,0.25); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; border-radius: 8px; font-weight: 600; }
+.service-area, .note-box { background: rgba(238,242,239,0.72); border-radius: 12px; padding: 1rem; font-weight: 700; }
+.service-area { text-align: center; font-style: italic; }
+.floating-text { position: fixed; bottom: 20px; right: 20px; background: #2563eb; color: white; padding: 14px 20px; border-radius: 999px; text-decoration: none; font-weight: 900; box-shadow: 0 4px 18px rgba(0,0,0,0.35); z-index: 999; }
 .floating-text:hover { background: #1d4ed8; color: white; text-decoration: none; }
-footer {
-    text-align: center;
-    padding: 1.5rem;
-    color: rgba(255,255,255,0.95);
-    font-size: 0.85rem;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.45);
-}
+footer { text-align: center; padding: 1.5rem; color: rgba(255,255,255,0.95); font-size: 0.85rem; text-shadow: 1px 1px 3px rgba(0,0,0,0.45); }
 footer p { margin-bottom: 0.35rem; }
-@media (max-width: 520px) {
-    .container { padding: 1rem 0.8rem 6rem; }
-    .navbar { gap: 0.75rem; }
-    .floating-text { left: 16px; right: 16px; text-align: center; }
-}
+@media (max-width: 520px) { .container { padding: 1rem 0.8rem 6rem; } .navbar { gap: 0.75rem; } .floating-text { left: 16px; right: 16px; text-align: center; } }
+
+
 </style>
 </head>
-
-<body>
-<div class="container">
-
+<body><div class="container">
     <div class="logo">
         <img src="jesselogo.jpg" alt="Third Earth Surfboards Logo">
         <h1>Third Earth Surfboards</h1>
@@ -198,77 +95,30 @@ footer p { margin-bottom: 0.35rem; }
     </div>
 
     <nav class="navbar">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="repairs.html">Repairs</a>
-        <a href="our-work.html">Our Work</a>
-        <a href="tel:2108700545">Call</a>
-        <a href="sms:2108700545">Schedule Repair</a>
+        <a href="index.html" class="">Home</a>
+        <a href="about.html" class="active">About</a>
+        <a href="repairs.html" class="">Repairs</a>
+        <a href="our-work.html" class="">Our Work</a>
+        <a href="tel:2108700545" class="">Call</a>
+        <a href="sms:2108700545" class="">Schedule Repair</a>
     </nav>
-
-    <section class="hero">
-        <h2>About Third Earth Surfboards</h2>
-        <p>Local surfboard repair, restorations, custom builds, and hand-shaped boards for Corpus Christi and the surrounding coast.</p>
-        <div class="button-row">
-            <a href="sms:2108700545" class="button">📱 Schedule Repair</a>
-            <a href="our-work.html" class="button secondary">View Our Work</a>
-        </div>
-    </section>
-
-    <section>
-        <h2>What We Do</h2>
-        <p>Third Earth Surfboards handles everything from everyday dings to more serious board damage, restorations, and custom board builds.</p>
-        <p>Whether your board needs a quick repair, a cleaner finish, or a complete custom build, the goal is simple: solid work, honest pricing, and boards that get back in the water.</p>
-    </section>
-
-    <section>
-        <h2>Repair Process</h2>
-        <div class="service-grid">
-            <div class="service-card"><strong>1. Send Photos</strong>Text or email pictures of the damage, board type, and any details you know.</div>
-            <div class="service-card"><strong>2. Get A Quote</strong>Pricing depends on board material, damage size, location, and finish work needed.</div>
-            <div class="service-card"><strong>3. Drop Off Board</strong>Schedule a time, drop it off, and the repair work begins after inspection.</div>
-        </div>
-    </section>
-
-    <section>
-        <h2>Custom Boards & Restorations</h2>
-        <p>Third Earth Surfboards also offers custom surfboard builds from raw foam blanks, custom epoxy construction, restorations, and vintage board work.</p>
-        <p>For custom work, send photos, board dimensions, riding style, and what you want the finished board to feel like.</p>
-        <div class="button-row">
-            <a href="repairs.html" class="button">View Repairs & Pricing →</a>
-            <a href="our-work.html" class="button secondary">View Photo Gallery →</a>
-        </div>
-    </section>
-
-    <section>
-        <h2>Our Work</h2>
-        <p>See examples of finished boards, repairs, restorations, and custom surfboard work.</p>
-        <a href="our-work.html" class="button">View Our Work →</a>
-    </section>
-
+    <section class="hero"><h2>About Third Earth Surfboards</h2><p>Local surfboard repair, restorations, custom builds, and hand-shaped boards for Corpus Christi and the surrounding coast.</p><div class="button-row"><a href="sms:2108700545" class="button">📱 Schedule Repair</a><a href="our-work.html" class="button secondary">View Our Work</a></div></section>
+    <section><h2>What We Do</h2><p>Third Earth Surfboards handles everything from everyday dings to more serious board damage, restorations, and custom board builds.</p><p>Whether your board needs a quick repair, a cleaner finish, or a complete custom build, the goal is simple: solid work, honest pricing, and boards that get back in the water.</p></section>
+    <section><h2>Repair Process</h2><div class="service-grid"><div class="service-card"><strong>1. Send Photos</strong>Text or email pictures of the damage, board type, and any details you know.</div><div class="service-card"><strong>2. Get A Quote</strong>Pricing depends on board material, damage size, location, and finish work needed.</div><div class="service-card"><strong>3. Drop Off Board</strong>Schedule a time, drop it off, and the repair work begins after inspection.</div></div></section>
+    <section><h2>Custom Boards & Restorations</h2><p>Third Earth Surfboards also offers custom surfboard builds from raw foam blanks, custom epoxy construction, restorations, and vintage board work.</p><p>For custom work, send photos, board dimensions, riding style, and what you want the finished board to feel like.</p><div class="button-row"><a href="repairs.html" class="button">View Repairs & Pricing →</a><a href="our-work.html" class="button secondary">View Photo Gallery →</a></div></section>
+    <section><h2>Our Work</h2><p>See examples of finished boards, repairs, restorations, and custom surfboard work.</p><a href="our-work.html" class="button">View Our Work →</a></section>
     <section id="schedule">
         <h2>Schedule An Appointment</h2>
         <div class="contact-grid">
-            <div class="contact-card">
-                <strong>📞 Phone / Text</strong>
-                <a href="tel:2108700545">210-870-0545</a>
-            </div>
-            <div class="contact-card">
-                <strong>✉️ Email</strong>
-                <a href="mailto:thirdearthsurfboards@gmail.com">thirdearthsurfboards@gmail.com</a>
-            </div>
-            <div class="contact-card">
-                <strong>📍 Service Area</strong>
-                Corpus Christi, Padre Island, Port Aransas & nearby coastal communities
-            </div>
+            <div class="contact-card"><strong>📞 Phone / Text</strong><a href="tel:2108700545">210-870-0545</a></div>
+            <div class="contact-card"><strong>✉️ Email</strong><a href="mailto:thirdearthsurfboards@gmail.com">thirdearthsurfboards@gmail.com</a></div>
+            <div class="contact-card"><strong>📍 Service Area</strong>Corpus Christi, Padre Island, Port Aransas & nearby coastal communities</div>
         </div>
     </section>
 
     <section>
         <h2>Hours</h2>
-        <ul class="hours-list">
-            <li><span>Monday – Sunday</span><span>10:00 AM – 6:00 PM</span></li>
-        </ul>
+        <ul class="hours-list"><li><span>Monday – Sunday</span><span>10:00 AM – 6:00 PM</span></li></ul>
     </section>
 
     <section>
@@ -280,11 +130,4 @@ footer p { margin-bottom: 0.35rem; }
         <p>Third Earth Surfboards — Professional repairs, custom boards, fast turnaround</p>
         <p>Website by ProCammer Rodriguez</p>
     </footer>
-
-</div>
-
-<a href="sms:2108700545" class="floating-text">📱 Schedule Repair</a>
-
-</body>
-</html>
-```
+</div><a href="sms:2108700545" class="floating-text">📱 Schedule Repair</a></body></html>
