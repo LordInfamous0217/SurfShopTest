@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Work | Third Earth Surfboards</title>
+
+<meta name="description" content="View custom surfboards, surfboard repairs, restorations, and before-and-after work from Third Earth Surfboards in Corpus Christi.">
+
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-image: linear-gradient(rgba(0,30,45,0.18), rgba(0,30,45,0.18)), url('boib hall 2.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: #102a36;
+    line-height: 1.6;
+}
+@media (max-width: 768px) {
+    body {
+        background-image: linear-gradient(rgba(0,30,45,0.18), rgba(0,30,45,0.18)), url('bob hall portrait.jpg');
+        background-attachment: scroll;
+    }
+}
+.container { max-width: 1100px; margin: 0 auto; padding: 2rem 1.5rem 6rem; }
+.logo, section, .navbar {
+    background: rgba(255,255,255,0.72);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border: 1px solid rgba(255,255,255,0.55);
+    border-radius: 18px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 8px 25px rgba(15,23,42,0.10);
+    transition: 0.25s ease;
+}
+.logo:hover, section:hover, .navbar:hover {
+    transform: translateY(-2px);
+    background: rgba(255,255,255,0.82);
+    box-shadow: 0 10px 28px rgba(37,99,235,0.18);
+}
+.logo { text-align: center; }
+.logo img { max-width: 100%; max-height: 145px; object-fit: contain; margin-bottom: 0.5rem; }
+.logo h1 { font-size: clamp(2rem, 5vw, 3rem); color: #082f49; line-height: 1.1; }
+.logo p { color: #164e63; font-size: 0.95rem; letter-spacing: 1px; font-weight: 800; text-transform: uppercase; }
+.navbar {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
+    position: sticky;
+    top: 10px;
+    z-index: 10;
+}
+.navbar a, a { color: #0f172a; text-decoration: none; font-weight: 700; }
+.navbar a { color: #1e3a8a; }
+a:hover, .navbar a:hover { color: #2563eb; text-decoration: underline; }
+.hero { text-align: center; padding: 2rem 1.5rem; }
+.hero h2 {
+    font-size: clamp(1.9rem, 5vw, 3rem);
+    line-height: 1.1;
+    margin-bottom: 0.75rem;
+    color: #082f49;
+}
+.hero p {
+    max-width: 760px;
+    margin: 0 auto 1rem;
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #14333f;
+}
+.gallery-wrap {
+    position: relative;
+    max-width: 850px;
+    margin: 0 auto;
+    text-align: center;
+}
+.gallery-img {
+    width: 100%;
+    max-height: 650px;
+    object-fit: contain;
+    border-radius: 18px;
+    background: rgba(15,23,42,0.85);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+}
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    width: 48px;
+    height: 48px;
+    border-radius: 999px;
+    background: rgba(37,99,235,0.9);
+    color: white;
+    font-size: 2rem;
+    font-weight: 900;
+    cursor: pointer;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.35);
+}
+.arrow:hover { background: #1d4ed8; }
+.arrow.left { left: 12px; }
+.arrow.right { right: 12px; }
+.counter {
+    margin-top: 0.75rem;
+    font-weight: 800;
+    color: #164e63;
+}
+.thumbs {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(95px, 1fr));
+    gap: 0.75rem;
+    margin-top: 1.25rem;
+}
+.thumbs img {
+    width: 100%;
+    height: 90px;
+    object-fit: cover;
+    border-radius: 12px;
+    cursor: pointer;
+    border: 3px solid transparent;
+    opacity: 0.8;
+}
+.thumbs img:hover, .thumbs img.active {
+    border-color: #2563eb;
+    opacity: 1;
+}
+.button {
+    display: inline-block;
+    padding: 12px 22px;
+    background: #2563eb;
+    color: white;
+    border-radius: 999px;
+    font-weight: 800;
+    box-shadow: 0 6px 18px rgba(37,99,235,0.25);
+}
+.button:hover {
+    background: #1d4ed8;
+    color: white;
+    text-decoration: none;
+}
+.button-row {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+.floating-text {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #2563eb;
+    color: white;
+    padding: 14px 20px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 900;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.35);
+    z-index: 999;
+}
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    color: rgba(255,255,255,0.95);
+    font-size: 0.85rem;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.45);
+}
+@media (max-width: 520px) {
+    .container { padding: 1rem 0.8rem 6rem; }
+    .arrow { width: 42px; height: 42px; font-size: 1.7rem; }
+    .floating-text { left: 16px; right: 16px; text-align: center; }
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+
+    <div class="logo">
+        <img src="jesselogo.jpg" alt="Third Earth Surfboards Logo">
+        <h1>Third Earth Surfboards</h1>
+        <p>Corpus Christi & Surrounding Areas</p>
+    </div>
+
+    <nav class="navbar">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="repairs.html">Repairs</a>
+        <a href="our-work.html">Our Work</a>
+        <a href="tel:2108700545">Call</a>
+        <a href="sms:2108700545">Schedule Repair</a>
+    </nav>
+
+    <section class="hero">
+        <h2>Our Work</h2>
+        <p>Custom surfboards, repairs, restorations, and hand-shaped boards built and repaired for the Texas coast.</p>
+        <div class="button-row">
+            <a href="sms:2108700545" class="button">📱 Schedule Repair</a>
+        </div>
+    </section>
+
+    <section>
+        <div class="gallery-wrap">
+            <button class="arrow left" onclick="prevImage()">‹</button>
+            <img id="mainPhoto" class="gallery-img" src="board.jpg" alt="Third Earth Surfboards work photo">
+            <button class="arrow right" onclick="nextImage()">›</button>
+            <div id="counter" class="counter"></div>
+
+            <div class="thumbs" id="thumbs"></div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Third Earth Surfboards — Professional repairs, custom boards, fast turnaround</p>
+        <p>Website by ProCammer Rodriguez</p>
+    </footer>
+
+</div>
+
+<a href="sms:2108700545" class="floating-text">📱 Schedule Repair</a>
+
+<script>
+const photos = [
+    "board.jpg",
+    "IMG_0361.jpg",
+    "IMG_1674.jpg",
+    "IMG_1743.jpg",
+    "IMG_1744.jpg",
+    "IMG_1831.jpg",
+    "IMG_2191.jpg",
+    "IMG_2196.jpg"
+];
+
+let current = 0;
+
+const mainPhoto = document.getElementById("mainPhoto");
+const counter = document.getElementById("counter");
+const thumbs = document.getElementById("thumbs");
+
+function showImage(index) {
+    current = index;
+    mainPhoto.src = photos[current];
+    counter.textContent = (current + 1) + " / " + photos.length;
+
+    document.querySelectorAll(".thumbs img").forEach((img, i) => {
+        img.classList.toggle("active", i === current);
+    });
+}
+
+function nextImage() {
+    current = (current + 1) % photos.length;
+    showImage(current);
+}
+
+function prevImage() {
+    current = (current - 1 + photos.length) % photos.length;
+    showImage(current);
+}
+
+photos.forEach((photo, index) => {
+    const img = document.createElement("img");
+    img.src = photo;
+    img.alt = "Third Earth Surfboards gallery image";
+    img.onclick = () => showImage(index);
+    thumbs.appendChild(img);
+});
+
+showImage(0);
+</script>
+
+</body>
+</html>
