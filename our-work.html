@@ -1,13 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Our Work | Third Earth Surfboards</title>
-
-<meta name="description" content="View custom surfboards, surfboard repairs, restorations, and before-and-after work from Third Earth Surfboards in Corpus Christi.">
-
+<meta name="description" content="View surfboard repairs, restorations, custom boards, and hand-shaped surfboards from Third Earth Surfboards in Corpus Christi.">
+<meta property="og:title" content="Our Work | Third Earth Surfboards">
+<meta property="og:description" content="View surfboard repairs, restorations, custom boards, and hand-shaped surfboards from Third Earth Surfboards in Corpus Christi.">
+<meta property="og:image" content="https://thirdearthsurfboards.com/jesselogo.jpg">
+<meta property="og:url" content="https://thirdearthsurfboards.com/our-work.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Third Earth Surfboards">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Our Work | Third Earth Surfboards">
+<meta name="twitter:description" content="View surfboard repairs, restorations, custom boards, and hand-shaped surfboards from Third Earth Surfboards in Corpus Christi.">
+<meta name="twitter:image" content="https://thirdearthsurfboards.com/jesselogo.jpg">
+<meta name="theme-color" content="#2563eb">
 <style>
+
 * { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body {
@@ -27,7 +36,7 @@ body {
     }
 }
 .container { max-width: 1100px; margin: 0 auto; padding: 2rem 1.5rem 6rem; }
-.logo, section, .navbar {
+.logo, section, .navbar, .header, details {
     background: rgba(255,255,255,0.72);
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
@@ -38,7 +47,7 @@ body {
     box-shadow: 0 8px 25px rgba(15,23,42,0.10);
     transition: 0.25s ease;
 }
-.logo:hover, section:hover, .navbar:hover {
+.logo:hover, section:hover, .navbar:hover, .header:hover, details:hover {
     transform: translateY(-2px);
     background: rgba(255,255,255,0.82);
     box-shadow: 0 10px 28px rgba(37,99,235,0.18);
@@ -47,141 +56,56 @@ body {
 .logo img { max-width: 100%; max-height: 145px; object-fit: contain; margin-bottom: 0.5rem; }
 .logo h1 { font-size: clamp(2rem, 5vw, 3rem); color: #082f49; line-height: 1.1; }
 .logo p { color: #164e63; font-size: 0.95rem; letter-spacing: 1px; font-weight: 800; text-transform: uppercase; }
-.navbar {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-    padding: 1rem;
-    position: sticky;
-    top: 10px;
-    z-index: 10;
-}
+.navbar { display: flex; justify-content: center; flex-wrap: wrap; gap: 1rem; padding: 1rem; position: sticky; top: 10px; z-index: 10; }
 .navbar a, a { color: #0f172a; text-decoration: none; font-weight: 700; }
 .navbar a { color: #1e3a8a; }
-a:hover, .navbar a:hover { color: #2563eb; text-decoration: underline; }
-.hero { text-align: center; padding: 2rem 1.5rem; }
-.hero h2 {
-    font-size: clamp(1.9rem, 5vw, 3rem);
-    line-height: 1.1;
-    margin-bottom: 0.75rem;
-    color: #082f49;
-}
-.hero p {
-    max-width: 760px;
-    margin: 0 auto 1rem;
-    font-size: 1.05rem;
-    font-weight: 600;
-    color: #14333f;
-}
-.gallery-wrap {
-    position: relative;
-    max-width: 850px;
-    margin: 0 auto;
-    text-align: center;
-}
-.gallery-img {
-    width: 100%;
-    max-height: 650px;
-    object-fit: contain;
-    border-radius: 18px;
-    background: rgba(15,23,42,0.85);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.35);
-}
-.arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    border: none;
-    width: 48px;
-    height: 48px;
-    border-radius: 999px;
-    background: rgba(37,99,235,0.9);
-    color: white;
-    font-size: 2rem;
-    font-weight: 900;
-    cursor: pointer;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.35);
-}
+a:hover, .navbar a:hover, .navbar a.active { color: #2563eb; text-decoration: underline; }
+h2 { font-size: 1.5rem; margin-bottom: 0.85rem; color: #1e3a8a; border-left: 4px solid #2563eb; padding-left: 0.75rem; }
+p { margin-bottom: 0.6rem; }
+.hero, .header { text-align: center; padding: 2rem 1.5rem; }
+.hero h2 { border-left: 0; padding-left: 0; font-size: clamp(1.9rem, 5vw, 3rem); line-height: 1.1; margin-bottom: 0.75rem; color: #082f49; }
+.header h1 { color: #082f49; font-size: clamp(1.9rem, 5vw, 3rem); line-height: 1.1; margin-bottom: 0.75rem; }
+.hero p, .header p { max-width: 760px; margin: 0 auto 1rem; font-size: 1.05rem; font-weight: 600; color: #14333f; }
+.button-row { display: flex; justify-content: center; flex-wrap: wrap; gap: 0.75rem; margin-top: 1rem; }
+.button, .back-button { display: inline-block; padding: 12px 22px; background: #2563eb; color: white; border-radius: 999px; font-weight: 800; box-shadow: 0 6px 18px rgba(37,99,235,0.25); text-decoration: none; border: none; cursor: pointer; }
+.button:hover, .back-button:hover { background: #1d4ed8; color: white; text-decoration: none; transform: translateY(-1px); }
+.button.secondary { background: rgba(15,23,42,0.9); }
+.contact-grid, .service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 1rem; }
+.contact-card, .service-card { background: rgba(248,250,252,0.72); padding: 1rem; border-radius: 14px; border: 1px solid rgba(148,163,184,0.25); }
+.contact-card strong, .service-card strong { color: #1e40af; display: block; font-size: 0.9rem; margin-bottom: 0.25rem; }
+.hours-list { list-style: none; }
+.hours-list li { padding: 0.7rem; border-bottom: 1px solid rgba(100,116,139,0.25); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; border-radius: 8px; font-weight: 600; }
+.service-area, .note-box { background: rgba(238,242,239,0.72); border-radius: 12px; padding: 1rem; font-weight: 700; }
+.service-area { text-align: center; font-style: italic; }
+.floating-text { position: fixed; bottom: 20px; right: 20px; background: #2563eb; color: white; padding: 14px 20px; border-radius: 999px; text-decoration: none; font-weight: 900; box-shadow: 0 4px 18px rgba(0,0,0,0.35); z-index: 999; }
+.floating-text:hover { background: #1d4ed8; color: white; text-decoration: none; }
+footer { text-align: center; padding: 1.5rem; color: rgba(255,255,255,0.95); font-size: 0.85rem; text-shadow: 1px 1px 3px rgba(0,0,0,0.45); }
+footer p { margin-bottom: 0.35rem; }
+@media (max-width: 520px) { .container { padding: 1rem 0.8rem 6rem; } .navbar { gap: 0.75rem; } .floating-text { left: 16px; right: 16px; text-align: center; } }
+
+
+.gallery-shell { max-width: 940px; margin: 0 auto; }
+.gallery-stage { position: relative; display: grid; place-items: center; min-height: 420px; background: rgba(15,23,42,0.88); border-radius: 22px; overflow: hidden; box-shadow: 0 14px 40px rgba(0,0,0,0.35); border: 1px solid rgba(255,255,255,0.25); }
+.gallery-stage img { width: 100%; height: min(68vh, 680px); object-fit: contain; display: block; opacity: 1; transition: opacity .25s ease; cursor: zoom-in; }
+.gallery-stage img.fade { opacity: 0; }
+.arrow { position: absolute; top: 50%; transform: translateY(-50%); width: 52px; height: 52px; border: none; border-radius: 999px; background: rgba(37,99,235,0.92); color: white; font-size: 2.25rem; font-weight: 900; cursor: pointer; box-shadow: 0 6px 20px rgba(0,0,0,0.35); display: grid; place-items: center; line-height: 1; }
 .arrow:hover { background: #1d4ed8; }
-.arrow.left { left: 12px; }
-.arrow.right { right: 12px; }
-.counter {
-    margin-top: 0.75rem;
-    font-weight: 800;
-    color: #164e63;
-}
-.thumbs {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(95px, 1fr));
-    gap: 0.75rem;
-    margin-top: 1.25rem;
-}
-.thumbs img {
-    width: 100%;
-    height: 90px;
-    object-fit: cover;
-    border-radius: 12px;
-    cursor: pointer;
-    border: 3px solid transparent;
-    opacity: 0.8;
-}
-.thumbs img:hover, .thumbs img.active {
-    border-color: #2563eb;
-    opacity: 1;
-}
-.button {
-    display: inline-block;
-    padding: 12px 22px;
-    background: #2563eb;
-    color: white;
-    border-radius: 999px;
-    font-weight: 800;
-    box-shadow: 0 6px 18px rgba(37,99,235,0.25);
-}
-.button:hover {
-    background: #1d4ed8;
-    color: white;
-    text-decoration: none;
-}
-.button-row {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 0.75rem;
-    margin-top: 1rem;
-}
-.floating-text {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #2563eb;
-    color: white;
-    padding: 14px 20px;
-    border-radius: 999px;
-    text-decoration: none;
-    font-weight: 900;
-    box-shadow: 0 4px 18px rgba(0,0,0,0.35);
-    z-index: 999;
-}
-footer {
-    text-align: center;
-    padding: 1.5rem;
-    color: rgba(255,255,255,0.95);
-    font-size: 0.85rem;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.45);
-}
-@media (max-width: 520px) {
-    .container { padding: 1rem 0.8rem 6rem; }
-    .arrow { width: 42px; height: 42px; font-size: 1.7rem; }
-    .floating-text { left: 16px; right: 16px; text-align: center; }
-}
+.arrow.left { left: 14px; }
+.arrow.right { right: 14px; }
+.gallery-count { text-align: center; margin: .9rem 0 0; color: #164e63; font-weight: 900; }
+.thumbs { display: grid; grid-template-columns: repeat(auto-fit, minmax(88px, 1fr)); gap: .75rem; margin-top: 1rem; }
+.thumbs button { border: 3px solid transparent; border-radius: 14px; overflow: hidden; padding: 0; background: rgba(15,23,42,0.75); cursor: pointer; height: 88px; opacity: .72; }
+.thumbs button.active, .thumbs button:hover { border-color: #2563eb; opacity: 1; }
+.thumbs img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.lightbox { position: fixed; inset: 0; background: rgba(2,6,23,.92); display: none; place-items: center; z-index: 2000; padding: 1rem; }
+.lightbox.open { display: grid; }
+.lightbox img { max-width: 96vw; max-height: 88vh; object-fit: contain; border-radius: 16px; box-shadow: 0 10px 35px rgba(0,0,0,.45); }
+.close-lightbox { position: fixed; top: 18px; right: 18px; border: none; border-radius: 999px; background: #2563eb; color: white; font-size: 1.6rem; width: 46px; height: 46px; cursor: pointer; font-weight: 900; }
+@media (max-width: 520px) { .gallery-stage { min-height: 320px; } .gallery-stage img { height: 55vh; } .arrow { width: 42px; height: 42px; font-size: 1.75rem; } .arrow.left { left: 8px; } .arrow.right { right: 8px; } .thumbs { grid-template-columns: repeat(auto-fit, minmax(72px, 1fr)); } .thumbs button { height: 72px; } }
+
 </style>
 </head>
-
-<body>
-<div class="container">
-
+<body><div class="container">
     <div class="logo">
         <img src="jesselogo.jpg" alt="Third Earth Surfboards Logo">
         <h1>Third Earth Surfboards</h1>
@@ -189,90 +113,75 @@ footer {
     </div>
 
     <nav class="navbar">
-        <a href="index.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="repairs.html">Repairs</a>
-        <a href="our-work.html">Our Work</a>
-        <a href="tel:2108700545">Call</a>
-        <a href="sms:2108700545">Schedule Repair</a>
+        <a href="index.html" class="">Home</a>
+        <a href="about.html" class="">About</a>
+        <a href="repairs.html" class="">Repairs</a>
+        <a href="our-work.html" class="active">Our Work</a>
+        <a href="tel:2108700545" class="">Call</a>
+        <a href="sms:2108700545" class="">Schedule Repair</a>
     </nav>
-
-    <section class="hero">
-        <h2>Our Work</h2>
-        <p>Custom surfboards, repairs, restorations, and hand-shaped boards built and repaired for the Texas coast.</p>
-        <div class="button-row">
-            <a href="sms:2108700545" class="button">📱 Schedule Repair</a>
-        </div>
-    </section>
-
-    <section>
-        <div class="gallery-wrap">
-            <button class="arrow left" onclick="prevImage()">‹</button>
-            <img id="mainPhoto" class="gallery-img" src="board.jpg" alt="Third Earth Surfboards work photo">
-            <button class="arrow right" onclick="nextImage()">›</button>
-            <div id="counter" class="counter"></div>
-
-            <div class="thumbs" id="thumbs"></div>
-        </div>
-    </section>
-
-    <footer>
-        <p>Third Earth Surfboards — Professional repairs, custom boards, fast turnaround</p>
-        <p>Website by ProCammer Rodriguez</p>
-    </footer>
-
-</div>
-
-<a href="sms:2108700545" class="floating-text">📱 Schedule Repair</a>
-
+    <section class="hero"><h2>Our Work</h2><p>Custom surfboards, repairs, restorations, and hand-shaped boards built and repaired for the Texas coast.</p><div class="button-row"><a href="sms:2108700545" class="button">📱 Schedule Repair</a><a href="repairs.html" class="button secondary">View Pricing</a></div></section>
+    <section><h2>Photo Gallery</h2><p>Use the arrows, swipe on mobile, or tap a thumbnail to browse. Click the big photo to view it larger.</p><div class="gallery-shell"><div class="gallery-stage" id="stage"><button class="arrow left" aria-label="Previous photo" id="prevBtn">‹</button><img id="mainPhoto" src="board.jpg" alt="Third Earth Surfboards completed board and repair work"><button class="arrow right" aria-label="Next photo" id="nextBtn">›</button></div><div class="gallery-count" id="counter"></div><div class="thumbs" id="thumbs" aria-label="Photo thumbnails"></div></div></section>
+    <section><h2>Ready To Fix Or Build Your Board?</h2><p>Send photos of your board, the damage, or the type of custom board you want built.</p><div class="button-row"><a href="sms:2108700545" class="button">Text Photos Now</a><a href="mailto:thirdearthsurfboards@gmail.com" class="button secondary">Email Photos</a></div></section>
+    <footer><p>Third Earth Surfboards — Professional repairs, custom boards, fast turnaround</p><p>Website by ProCammer Rodriguez</p></footer>
+</div><a href="sms:2108700545" class="floating-text">📱 Schedule Repair</a><div class="lightbox" id="lightbox"><button class="close-lightbox" id="closeLightbox" aria-label="Close photo">×</button><img id="lightboxImg" src="" alt="Third Earth Surfboards enlarged gallery photo"></div>
 <script>
 const photos = [
-    "board.jpg",
-    "IMG_0361.jpg",
-    "IMG_1674.jpg",
-    "IMG_1743.jpg",
-    "IMG_1744.jpg",
-    "IMG_1831.jpg",
-    "IMG_2191.jpg",
-    "IMG_2196.jpg"
+    'board.jpg',
+    'IMG_0361.jpg',
+    'IMG_1674.jpg',
+    'IMG_1743.jpg',
+    'IMG_1744.jpg',
+    'IMG_1831.jpg',
+    'IMG_2191.jpg',
+    'IMG_2196.jpg'
 ];
-
 let current = 0;
-
-const mainPhoto = document.getElementById("mainPhoto");
-const counter = document.getElementById("counter");
-const thumbs = document.getElementById("thumbs");
-
+const mainPhoto = document.getElementById('mainPhoto');
+const counter = document.getElementById('counter');
+const thumbs = document.getElementById('thumbs');
+const stage = document.getElementById('stage');
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightboxImg');
 function showImage(index) {
-    current = index;
-    mainPhoto.src = photos[current];
-    counter.textContent = (current + 1) + " / " + photos.length;
-
-    document.querySelectorAll(".thumbs img").forEach((img, i) => {
-        img.classList.toggle("active", i === current);
-    });
+    current = (index + photos.length) % photos.length;
+    mainPhoto.classList.add('fade');
+    setTimeout(() => {
+        mainPhoto.src = photos[current];
+        lightboxImg.src = photos[current];
+        counter.textContent = (current + 1) + ' / ' + photos.length;
+        document.querySelectorAll('.thumbs button').forEach((btn, i) => btn.classList.toggle('active', i === current));
+        mainPhoto.classList.remove('fade');
+    }, 150);
 }
-
-function nextImage() {
-    current = (current + 1) % photos.length;
-    showImage(current);
-}
-
-function prevImage() {
-    current = (current - 1 + photos.length) % photos.length;
-    showImage(current);
-}
-
+function nextImage() { showImage(current + 1); }
+function prevImage() { showImage(current - 1); }
+document.getElementById('nextBtn').addEventListener('click', nextImage);
+document.getElementById('prevBtn').addEventListener('click', prevImage);
 photos.forEach((photo, index) => {
-    const img = document.createElement("img");
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.setAttribute('aria-label', 'View gallery photo ' + (index + 1));
+    const img = document.createElement('img');
     img.src = photo;
-    img.alt = "Third Earth Surfboards gallery image";
-    img.onclick = () => showImage(index);
-    thumbs.appendChild(img);
+    img.alt = 'Third Earth Surfboards gallery thumbnail';
+    btn.appendChild(img);
+    btn.addEventListener('click', () => showImage(index));
+    thumbs.appendChild(btn);
 });
-
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowRight') nextImage();
+    if (e.key === 'ArrowLeft') prevImage();
+    if (e.key === 'Escape') lightbox.classList.remove('open');
+});
+let touchStartX = 0;
+stage.addEventListener('touchstart', e => touchStartX = e.changedTouches[0].screenX, {passive:true});
+stage.addEventListener('touchend', e => {
+    const diff = e.changedTouches[0].screenX - touchStartX;
+    if (Math.abs(diff) > 50) diff < 0 ? nextImage() : prevImage();
+}, {passive:true});
+mainPhoto.addEventListener('click', () => { lightboxImg.src = photos[current]; lightbox.classList.add('open'); });
+document.getElementById('closeLightbox').addEventListener('click', () => lightbox.classList.remove('open'));
+lightbox.addEventListener('click', e => { if (e.target === lightbox) lightbox.classList.remove('open'); });
 showImage(0);
-</script>
-
-</body>
-</html>
+</script></body></html>
